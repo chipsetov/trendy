@@ -1,0 +1,18 @@
+/*
+Theme Name: tamarillo
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: the WordPress team
+*/
+
+.content {
+    margin-top: 200px;
+}
+
+.form-style p{
+    display: inline-block;
+}
+
+.form-style div{
+    text-align: right;
+}
+

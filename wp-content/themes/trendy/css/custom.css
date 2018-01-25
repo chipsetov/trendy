@@ -1,0 +1,41 @@
+/*header*/
+#menu-main-navigation {
+
+    float:right;
+    text-transform: uppercase;
+
+}
+
+header .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+
+
+}
+#menu-main-navigation a{
+//border: 1px solid #ffffff;
+
+}
+
+#menu-main-navigation a:hover{
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    /* Text style for "HOME" */
+    color: #c59966;
+    border: 1px solid #ffffff;
+    background-color: #2f2d2a;
+}
+
+.navbar {
+    background-color: #1b1a18;
+    border: 0;
+    border-radius: 0;
+}
+
+#templatemo_logo img {
+    margin-top: 7px;
+}

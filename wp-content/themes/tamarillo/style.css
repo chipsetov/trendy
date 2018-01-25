@@ -1,0 +1,14 @@
+/*
+Theme Name: Tamarello
+Theme URI: https://tamarello.com
+Author: Developer
+Author URI: https://tamarello.com/author
+Description: Tamarillo is free responsive template for everyone. Feel free to use this HTML5 template for any purpose. In metus nulla, ullamcorper congue semper et, sodales eget nibh. Phasellus magna eros, rhoncus eu dictum quis, hendrerit a mauris.
+Version: 0.1
+*/
+.content{
+    margin-top:150px;
+}
+.form-style p, .form-style div{
+	display:inline-block;
+}
