@@ -1,23 +1,24 @@
 <footer>
     <div class="top_footer">
-        <div class="twitterr footer_inner">
+        <div class="container twitterr footer_inner">
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-5')) ?>
         </div>
-        <div class="footer_inner">
-        </div>
-        <div class="wrapper">
-            <div class="menu_info footer_inner">
+        <div class="container wrapper">
+            <div class="row">
+            <div class="col-xs-12 col-sm-4 menu_info footer_inner">
                 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-1')) ?>
             </div>
-            <div class="contact footer_inner">
+            <div class="col-xs-12 col-sm-4 contact footer_inner">
                 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-2')) ?>
             </div>
-            <div class="twitter footer_inner">
+            <div class="col-xs-12 col-sm-4 twitter footer_inner">
                 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-3')) ?>
             </div>
-
+            </div>
         </div>
+
     </div>
+
     <div class="bottom_footer">
         <div class="wrapper">
             <div class="copyrights">
@@ -32,6 +33,11 @@
         </div>
     </div>
 </footer>
+<div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>
