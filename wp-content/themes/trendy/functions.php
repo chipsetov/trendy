@@ -78,3 +78,40 @@ add_theme_support( 'custom-logo' );
 
 
 require_once get_template_directory() . '/wp-bootstrap-navwalker.php';
+
+
+/*
+	==========================================
+	 Theme support function
+	==========================================
+*/
+add_theme_support('custom-background');
+add_theme_support('custom-header');
+add_theme_support('post-thumbnails');
+add_theme_support('post-formats',array('aside','video','audio','quote','gallery'));
+add_theme_support('html5',array('search-form'));
+add_image_size( 'spec_thumb_post', 770, 400, true );
+add_image_size( 'spec_thumb_rel_post', 310, 162, true );
+
+/*
+	==========================================
+	 Sidebar function
+	==========================================
+*/
+function awesome_widget_setup() {
+
+    register_sidebar(
+        array(
+            'name'	=> 'Sidebar',
+            'id'	=> 'sidebar-1',
+            'class'	=> 'custom',
+            'description' => 'Standard Sidebar',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h1 class="widget-title">',
+            'after_title'   => '</h1>',
+        )
+    );
+
+}
+add_action('widgets_init','awesome_widget_setup');
