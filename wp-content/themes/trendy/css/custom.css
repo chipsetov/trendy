@@ -273,3 +273,7 @@ div#calendar_wrap.calendar_wrap a {
     text-transform: uppercase;
     opacity: 1;
 }
+
+#sidebar .search-field {
+    width: 310px;
+}
