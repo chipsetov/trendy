@@ -484,14 +484,14 @@ div#calendar_wrap.calendar_wrap a {
     text-align: left;
 }
 
-.post-metadata-standard i, .post-metadata-standard a {
+.post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a {
     margin-right: 10px;
     color: #777777;
     font-size: 14px;
     font-weight: 400;
 }
 
-.post-metadata-standard i:nth-child(2) {
+.post-metadata-standard i:nth-child(2), .post-metadata-music i:nth-child(2) {
     margin-right: 0px;
 }
 
