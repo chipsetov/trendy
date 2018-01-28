@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="262f2122-6bca-4a2a-bb05-45e343723b80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/trendy/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/trendy/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/trendy/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/trendy/functions.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,17 +73,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="872">
-              <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
+            <state relative-caret-position="804">
+              <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
@@ -166,8 +164,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/trendy/content-quote.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/trendy/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/trendy/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/trendy/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" />
       </list>
     </option>
   </component>
@@ -286,12 +284,12 @@
       <workItem from="1516821444160" duration="8848000" />
       <workItem from="1516918495213" duration="2467000" />
       <workItem from="1517037444049" duration="22829000" />
-      <workItem from="1517127266991" duration="2237000" />
+      <workItem from="1517127266991" duration="3882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37236000" />
+    <option name="totallyTimeSpent" value="38881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -656,18 +654,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="73" column="22" lean-forward="false" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="39" column="93" lean-forward="false" selection-start-line="39" selection-start-column="93" selection-end-line="39" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding />
         </state>
       </provider>

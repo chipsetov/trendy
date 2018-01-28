@@ -73,3 +73,89 @@ header .container-fluid {
 .footer-head {
     text-align: center;
 }
+
+#sidebar h2.widget-title {
+
+    color: #191918;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-transform: uppercase;
+
+
+}
+
+#sidebar h2.widget-title::after {
+    content: '';
+    border-bottom-style: solid 2px;
+    width: 70px;
+    height: 2px;
+    background-color: #c69b6e;
+}
+
+#sidebar h2.widget-title {
+    /* чтобы линии не выходили за ширину блока заголовка */
+    overflow: hidden;
+}
+
+#sidebar h2.widget-title:after {
+    content: '';
+
+    /* делаем линию строчно-блочной */
+    display: block;
+
+    /* выравниваем вертикально по середине */
+    vertical-align: middle;
+
+    /* не позволяем ширине превысить 100% (будет добавлен бордюр) */
+    box-sizing: border-box;
+
+    /* установка ширины в 100% делает линию равной ширине тега заголовка
+    ** благодаря этому линия заполнит все свободное пространство
+    ** слева и справа от текста
+    */
+    width: 70px;
+    height: 2px;
+    background-color: #c69b6e;
+
+    /* добавляем к линии левый и правый бордюр цветом основного фона заголовка
+    ** благодаря этому создается нужный отступ между линиями и текстом
+    */
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px
+}
+
+.widget_categories ul {
+    border: 1px solid #cccccc;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.widget_categories li{
+    list-style-type: none;
+    padding-top: 29px;
+    padding-bottom: 24px;
+}
+.widget_categories li a{
+
+    color: #c5996c !important;
+    font-family: "Open Sans" !important;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    text-transform: uppercase;
+
+}
+
+.widget_categories li {
+    border-bottom: 1px solid;
+    border-color: #cccccc;
+
+}
+
+.widget_categories li:last-child {
+    border-bottom: none;
+
+}
