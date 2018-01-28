@@ -82,7 +82,8 @@ header .container-fluid {
     font-weight: 700;
     line-height: 28.8px;
     text-transform: uppercase;
-
+    padding-bottom: 30px;
+    padding-top: 75px;
 
 }
 
@@ -199,4 +200,20 @@ div#calendar_wrap.calendar_wrap a {
 
 #wp-calendar {
     width: 100%;
+}
+
+.textwidget {
+    background-color: #f6f6f6;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 26px;
+}
+
+.textwidget p{
+    background-color: #f6f6f6;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 26px;
 }
