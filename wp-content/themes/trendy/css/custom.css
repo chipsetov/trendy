@@ -209,3 +209,13 @@ div#calendar_wrap.calendar_wrap a {
     padding-top: 30px;
     padding-bottom: 26px;
 }
+
+.widget_most_popular_tags a {
+    background-color: #1a1918;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    padding: 10px 15px 10px 15px;
+}
