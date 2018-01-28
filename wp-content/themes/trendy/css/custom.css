@@ -429,6 +429,7 @@ div#calendar_wrap.calendar_wrap a {
 }
 .post-metadata-music {
     text-align: left;
+    margin-top: 28px;
 }
 
 .post-metadata-music:after, .post-metadata-standard:after, .post-metadata-video:after {
@@ -484,6 +485,7 @@ div#calendar_wrap.calendar_wrap a {
 
 .post-metadata-standard, .post-metadata-video  {
     text-align: left;
+    margin-top: 28px;
 }
 
 .post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a, .post-metadata-video i, .post-metadata-video a{
@@ -544,4 +546,8 @@ div#calendar_wrap.calendar_wrap a {
 
 .mejs-playpause-button {
     color: #191918 !important;
+}
+
+.post-standard-excerpt, .post-video-excerpt, .post-audio-excerpt {
+    margin-top: 30px;
 }
