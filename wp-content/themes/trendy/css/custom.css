@@ -84,6 +84,7 @@ header .container-fluid {
     text-transform: uppercase;
     padding-bottom: 30px;
     padding-top: 75px;
+    margin: 0 auto;
 
 }
 
@@ -202,7 +203,7 @@ div#calendar_wrap.calendar_wrap a {
     width: 100%;
 }
 
-.textwidget p{
+#sidebar .textwidget p{
     background-color: #f6f6f6;
     padding-left: 30px;
     padding-right: 30px;
@@ -218,4 +219,57 @@ div#calendar_wrap.calendar_wrap a {
     font-weight: 700;
     line-height: 16.8px;
     padding: 10px 15px 10px 15px;
+}
+
+.search-form .screen-reader-text {
+    display: none;
+}
+
+.search-form .search-submit{
+    display: none;
+}
+
+.search-form .search-field{
+    border: 1px solid #cccccc;
+    background-color: #f6f6f6;
+    padding-top: 17px;
+    padding-bottom: 19px;
+    padding-left: 17px;
+
+}
+
+
+.search-form .search-field::-webkit-input-placeholder { /* Chrome */
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+}
+.search-form .search-field:-ms-input-placeholder { /* IE 10+ */
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+}
+.search-form .search-field::-moz-placeholder { /* Firefox 19+ */
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.search-form .search-field:-moz-placeholder { /* Firefox 4 - 18 */
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+    opacity: 1;
 }
