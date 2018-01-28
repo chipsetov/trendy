@@ -414,3 +414,54 @@ div#calendar_wrap.calendar_wrap a {
     border-width: 0 0px;
     margin-top: 29px;
 }
+
+.post-title-music {
+    text-align: left;
+    color: #c5996c;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+}
+
+.post-metadata-music {
+    text-align: left;
+}
+
+.post-metadata-music:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 70px;
+    height: 1px;
+    background-color: #c69b6e;
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px;
+}
+
+.post-audio-excerpt p {
+    text-align: left;
+    color: #191918;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.post-content-music {
+    padding-bottom: 49px;
+}
+
+.global-content {
+    margin-bottom:100px;
+}
+
+.music-post {
+    margin-left: 30px;
+}
+
+.post-metadata-music i {
+    margin-right: 10px;
+}

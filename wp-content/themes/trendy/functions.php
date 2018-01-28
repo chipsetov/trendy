@@ -32,6 +32,7 @@ function trendy_script_enqueue()
         wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
         wp_enqueue_script('customjs', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
+
         wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext' );
         wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Bold.ttf' );
         wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Book.ttf' );
@@ -41,6 +42,12 @@ function trendy_script_enqueue()
 
 
 
+
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+function enqueue_load_fa() {
+
+    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 
 }
 
