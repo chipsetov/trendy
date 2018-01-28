@@ -32,6 +32,12 @@ function trendy_script_enqueue()
         wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
         wp_enqueue_script('customjs', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
+        wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext' );
+        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Bold.ttf' );
+        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Book.ttf' );
+        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Light.ttf' );
+        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Regular.ttf' );
+        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Thin.ttf' );
 
 
 
@@ -128,8 +134,8 @@ function awesome_widget_setup()
             'description' => 'Standard Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 
@@ -141,8 +147,8 @@ function awesome_widget_setup()
             'description' => 'Standard footer Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 
@@ -154,8 +160,8 @@ function awesome_widget_setup()
             'description' => 'Standard footer Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
     register_sidebar(
@@ -166,8 +172,8 @@ function awesome_widget_setup()
             'description' => 'Standard footer Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 
@@ -179,8 +185,8 @@ function awesome_widget_setup()
             'description' => 'Standard footer Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 
@@ -192,8 +198,8 @@ function awesome_widget_setup()
             'description' => 'Standard footer Sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget' => '</aside>',
-            'before_title' => '<h1 class="widget-title">',
-            'after_title' => '</h1>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
         )
     );
 

@@ -1,6 +1,6 @@
 <footer>
     <div class="top_footer">
-        <div class="container twitterr footer_inner">
+        <div class="container footer-head footer_inner">
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-5')) ?>
         </div>
         <div class="container wrapper">
