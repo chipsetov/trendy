@@ -33,11 +33,6 @@
         </div>
     </div>
 </footer>
-<div class="row">
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
-</div>
 <?php wp_footer(); ?>
 </body>
 </html>
