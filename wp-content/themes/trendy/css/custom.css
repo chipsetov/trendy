@@ -415,7 +415,7 @@ div#calendar_wrap.calendar_wrap a {
     margin-top: 29px;
 }
 
-.post-title-music {
+.post-title-music, .post-title-music a {
     text-align: left;
     color: #c5996c;
     font-family: "Open Sans";
@@ -424,6 +424,9 @@ div#calendar_wrap.calendar_wrap a {
     line-height: 33.6px;
 }
 
+.music-post h1 {
+    margin: 0 auto;
+}
 .post-metadata-music {
     text-align: left;
 }
@@ -464,4 +467,65 @@ div#calendar_wrap.calendar_wrap a {
 
 .post-metadata-music i {
     margin-right: 10px;
+}
+
+
+.post-title-standard, .post-title-standard a {
+    margin: 0 auto;
+    color: #c5996c;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: left;
+}
+
+.post-metadata-standard {
+    text-align: left;
+}
+
+.post-metadata-standard i, .post-metadata-standard a {
+    margin-right: 10px;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.post-metadata-standard i:nth-child(2) {
+    margin-right: 0px;
+}
+
+.post-standard-excerpt {
+    color: #191918;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+}
+
+
+.post-standard-readmore a{
+    background-color: #1a1918;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    padding: 10px 40px 10px 40px;
+
+}
+
+.post-standard-readmore {
+    margin-top: 46px;
+    text-align: left;
+}
+
+.standard-post {
+    margin-left: 30px;
+}
+
+.thumbnail-img {
+    margin-bottom: 48px;
 }
