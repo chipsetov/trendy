@@ -431,7 +431,7 @@ div#calendar_wrap.calendar_wrap a {
     text-align: left;
 }
 
-.post-metadata-music:after {
+.post-metadata-music:after, .post-metadata-standard:after, .post-metadata-video:after {
     content: '';
     display: block;
     vertical-align: middle;
@@ -463,6 +463,8 @@ div#calendar_wrap.calendar_wrap a {
 
 .music-post {
     margin-left: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .post-metadata-music i {
@@ -470,7 +472,7 @@ div#calendar_wrap.calendar_wrap a {
 }
 
 
-.post-title-standard, .post-title-standard a {
+.post-title-standard, .post-title-standard a, .post-title-video, .post-title-video a  {
     margin: 0 auto;
     color: #c5996c;
     font-family: "Open Sans";
@@ -480,22 +482,22 @@ div#calendar_wrap.calendar_wrap a {
     text-align: left;
 }
 
-.post-metadata-standard {
+.post-metadata-standard, .post-metadata-video  {
     text-align: left;
 }
 
-.post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a {
+.post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a, .post-metadata-video i, .post-metadata-video a{
     margin-right: 10px;
     color: #777777;
     font-size: 14px;
     font-weight: 400;
 }
 
-.post-metadata-standard i:nth-child(2), .post-metadata-music i:nth-child(2) {
+.post-metadata-standard i:nth-child(2), .post-metadata-music i:nth-child(2), .post-metadata-video i:nth-child(2) {
     margin-right: 0px;
 }
 
-.post-standard-excerpt {
+.post-standard-excerpt, .post-video-excerpt {
     color: #191918;
     font-family: "Open Sans";
     font-size: 16px;
@@ -505,7 +507,7 @@ div#calendar_wrap.calendar_wrap a {
 }
 
 
-.post-standard-readmore a{
+.post-standard-readmore a, .post-video-readmore a{
     background-color: #1a1918;
     color: #ffffff;
     font-family: "Open Sans";
@@ -517,15 +519,29 @@ div#calendar_wrap.calendar_wrap a {
 
 }
 
-.post-standard-readmore {
+.post-standard-readmore, .post-video-readmore {
     margin-top: 46px;
     text-align: left;
 }
 
 .standard-post {
     margin-left: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .thumbnail-img {
     margin-bottom: 48px;
+}
+
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+//background: #f6f6f6 !important;
+}
+
+.mejs-horizontal-volume-current, .mejs-time-slider{
+    background-color: #c59a6d !important;
+}
+
+.mejs-playpause-button {
+    color: #191918 !important;
 }
