@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="262f2122-6bca-4a2a-bb05-45e343723b80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" afterPath="$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="889">
-              <caret line="278" column="1" lean-forward="false" selection-start-line="278" selection-start-column="1" selection-end-line="278" selection-end-column="1" />
+              <caret line="305" column="1" lean-forward="false" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -285,12 +284,12 @@
       <workItem from="1516821444160" duration="8848000" />
       <workItem from="1516918495213" duration="2467000" />
       <workItem from="1517037444049" duration="22829000" />
-      <workItem from="1517127266991" duration="6613000" />
+      <workItem from="1517127266991" duration="7216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41612000" />
+    <option name="totallyTimeSpent" value="42215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -676,7 +675,7 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/trendy/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="889">
-          <caret line="278" column="1" lean-forward="false" selection-start-line="278" selection-start-column="1" selection-end-line="278" selection-end-column="1" />
+          <caret line="305" column="1" lean-forward="false" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="1" />
           <folding />
         </state>
       </provider>

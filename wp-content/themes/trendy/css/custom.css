@@ -277,3 +277,30 @@ div#calendar_wrap.calendar_wrap a {
 #sidebar .search-field {
     width: 310px;
 }
+
+#sidebar .popular-posts li{
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding-top: 29px;
+    padding-left: 32px;
+    padding-right: 40px;
+    padding-bottom: 29px;
+    margin-bottom: 15px;
+}
+#sidebar .popular-posts li:last-child{
+    margin-bottom: 0px;
+}
+#sidebar ul.wpp-list {
+    padding-left: 0;
+}
+#sidebar .popular-posts a.wpp-post-title{
+    color: #c5996c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+}
+
+#sidebar .popular-posts .post-stats {
+    margin-top: 23px;
+}
