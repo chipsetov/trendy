@@ -1,3 +1,8 @@
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 /*header*/
 #menu-main-navigation {
 
@@ -303,4 +308,31 @@ div#calendar_wrap.calendar_wrap a {
 
 #sidebar .popular-posts .post-stats {
     margin-top: 23px;
+}
+
+
+#our-blog-title {
+    border-bottom: 1px solid;
+    border-color: #cccccc;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#our-blog-title h1 {
+    color: #191918;
+    font-family: "Bebas Neue";
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 67.2px;
+    text-transform: uppercase;
+}
+
+#our-blog-title p {
+    color: #1a1918;
+    font-family: "Open Sans - Semibold";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
 }
