@@ -36,14 +36,14 @@
     </div>
 
     <div class="bottom_footer">
-        <div class="wrapper">
-            <div class="copyrights">
+        <div class="container">
+            <div class="col-xs-12 col-md-6 copyrights">
 
-                &copy; <?php _e('2016 All Rights Reserved “Iglesia” ', 'aletheme') ?>
+                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-2-1')) ?>
 
             </div>
-            <div class="footer_social">
-                bchgfhfh
+            <div class="col-xs-12 col-md-6 footer_social">
+                <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-f-2-2')) ?>
 
             </div>
         </div>

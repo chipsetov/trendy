@@ -615,3 +615,25 @@ div#calendar_wrap.calendar_wrap a {
 .three-block {
     padding-bottom: 97px;
 }
+
+.fa-rotate-45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.footer_social a, .footer_social i {
+    color: #191918;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    margin-left: 10px;
+}
+
+.copyrights, .footer_social {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
