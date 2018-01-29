@@ -9,7 +9,7 @@
         <div class="col-sm-10 quote-post">
             <div class="quote-post-border">
                 <div class="post-content-quote"><?php the_content(); ?></div>
-                <div class="post-title-quote"><?php the_title(); ?> </div>
+                <?php the_title(sprintf('<h1 class="post-title-quote"><a href="%s">', esc_url(get_permalink())), '</a></h1>'); ?>
             </div>
         </div>
 

@@ -56,7 +56,7 @@ header .container-fluid {
 
 .top_footer {
     width: 100%;
-    height: 30vh;
+    /*height: 30vh;*/
     background-color: #1b1a18;
     opacity: 0.9;
 }
@@ -387,7 +387,7 @@ div#calendar_wrap.calendar_wrap a {
     padding-right: 48px;
 }
 
-.post-title-quote {
+.post-title-quote, .post-title-quote a  {
     color: #191918;
     font-family: "Open Sans";
     font-size: 16px;
@@ -398,6 +398,11 @@ div#calendar_wrap.calendar_wrap a {
     padding-bottom: 27px;
     padding-top: 28px;
 }
+
+.post-title-quote a {
+    padding-left: 0px;
+}
+
 .quote-post-border {
     border: 1px solid #c79a6a;
 }
@@ -550,4 +555,63 @@ div#calendar_wrap.calendar_wrap a {
 
 .post-standard-excerpt, .post-video-excerpt, .post-audio-excerpt {
     margin-top: 30px;
+}
+
+.footer-icon i {
+    width: 48px;
+    height: 39px;
+    color: #ffffff;
+    /* font-family: "Font Awesome"; */
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 57.6px;
+}
+
+.footer-widget h2 {
+    margin-top: 15px;
+    margin-left: 0px;
+    color: #c5996c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+    text-transform: uppercase;
+}
+
+.footer-widget p {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+}
+
+.footer-widget {
+    padding-left: 29px;
+}
+
+.footer-head h2{
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 67.2px;
+    text-transform: uppercase;
+}
+
+.footer-head p {
+    color: #ffffff;
+    font-family: "Open Sans - Semibold";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+
+.footer-head {
+    padding-top: 100px;
+    padding-bottom: 71px;
+}
+
+.three-block {
+    padding-bottom: 97px;
 }
