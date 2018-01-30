@@ -622,6 +622,9 @@ div#calendar_wrap.calendar_wrap a {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    margin-left: 0px !important;
+    padding-bottom: 10px;
+
 }
 
 .footer_social a, .footer_social i {
