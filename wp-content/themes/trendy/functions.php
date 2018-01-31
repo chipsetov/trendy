@@ -242,3 +242,16 @@ function awesome_widget_setup()
 
 add_action('widgets_init', 'awesome_widget_setup');
 
+
+function add_to_author_profile( $contactmethods ) {
+
+    $contactmethods['google_profile'] = 'Google Profile URL';
+    $contactmethods['twitter_profile'] = 'Twitter Profile URL';
+    $contactmethods['facebook_profile'] = 'Facebook Profile URL';
+    $contactmethods['linkedin_profile'] = 'Linkedin Profile URL';
+    $contactmethods['pinterest_profile'] = 'Pinterest Profile URL';
+
+    return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'add_to_author_profile', 10, 1);
+

@@ -6,7 +6,7 @@
 /*header*/
 #menu-main-navigation {
 
-    float:right;
+    float: right;
     text-transform: uppercase;
 
 }
@@ -15,22 +15,22 @@ header .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 
-
-}
-#menu-main-navigation a{
-//border: 1px solid #ffffff;
-
 }
 
-#menu-main-navigation a{
+#menu-main-navigation a {
+/ / border: 1 px solid #ffffff;
+
+}
+
+#menu-main-navigation a {
     color: #ffffff;
-    font-weight:700;
+    font-weight: 700;
     font-size: 14px;
     font-family: "Open Sans";
     line-height: 16.8px;
 }
 
-#menu-main-navigation a:hover{
+#menu-main-navigation a:hover {
     color: #ffffff;
     font-family: "Open Sans";
     font-weight: 700;
@@ -40,7 +40,7 @@ header .container-fluid {
     color: #c59966;
     border: 1px solid #ffffff;
     background-color: #2f2d2a;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 14px;
 }
 
@@ -61,7 +61,7 @@ header .container-fluid {
     opacity: 0.9;
 }
 
-.navbar-default .navbar-nav>.active>a {
+.navbar-default .navbar-nav > .active > a {
     color: #ffffff;
     font-family: "Open Sans";
     font-weight: 700;
@@ -140,12 +140,13 @@ header .container-fluid {
     padding-right: 30px;
 }
 
-.widget_categories li{
+.widget_categories li {
     list-style-type: none;
     padding-top: 29px;
     padding-bottom: 24px;
 }
-.widget_categories li a{
+
+.widget_categories li a {
 
     color: #c5996c !important;
     font-family: "Open Sans" !important;
@@ -166,7 +167,6 @@ header .container-fluid {
     border-bottom: none;
 
 }
-
 
 div#calendar_wrap.calendar_wrap {
     background-color: #f6f6f6;
@@ -190,7 +190,6 @@ div#calendar_wrap.calendar_wrap thead {
     line-height: 16.8px;
     text-transform: uppercase;
 
-
 }
 
 div#calendar_wrap.calendar_wrap a {
@@ -208,7 +207,7 @@ div#calendar_wrap.calendar_wrap a {
     width: 100%;
 }
 
-#sidebar .textwidget p{
+#sidebar .textwidget p {
     background-color: #f6f6f6;
     padding-left: 30px;
     padding-right: 30px;
@@ -230,11 +229,11 @@ div#calendar_wrap.calendar_wrap a {
     display: none;
 }
 
-.search-form .search-submit{
+.search-form .search-submit {
     display: none;
 }
 
-.search-form .search-field{
+.search-form .search-field {
     border: 1px solid #cccccc;
     background-color: #f6f6f6;
     padding-top: 17px;
@@ -242,7 +241,6 @@ div#calendar_wrap.calendar_wrap a {
     padding-left: 17px;
 
 }
-
 
 .search-form .search-field::-webkit-input-placeholder { /* Chrome */
     color: #777777;
@@ -252,6 +250,7 @@ div#calendar_wrap.calendar_wrap a {
     line-height: 19.6px;
     text-transform: uppercase;
 }
+
 .search-form .search-field:-ms-input-placeholder { /* IE 10+ */
     color: #777777;
     font-family: "Open Sans";
@@ -260,6 +259,7 @@ div#calendar_wrap.calendar_wrap a {
     line-height: 19.6px;
     text-transform: uppercase;
 }
+
 .search-form .search-field::-moz-placeholder { /* Firefox 19+ */
     color: #777777;
     font-family: "Open Sans";
@@ -269,6 +269,7 @@ div#calendar_wrap.calendar_wrap a {
     text-transform: uppercase;
     opacity: 1;
 }
+
 .search-form .search-field:-moz-placeholder { /* Firefox 4 - 18 */
     color: #777777;
     font-family: "Open Sans";
@@ -283,7 +284,7 @@ div#calendar_wrap.calendar_wrap a {
     width: 310px;
 }
 
-#sidebar .popular-posts li{
+#sidebar .popular-posts li {
     border: 1px solid #cccccc;
     background-color: #ffffff;
     padding-top: 29px;
@@ -292,13 +293,16 @@ div#calendar_wrap.calendar_wrap a {
     padding-bottom: 29px;
     margin-bottom: 15px;
 }
-#sidebar .popular-posts li:last-child{
+
+#sidebar .popular-posts li:last-child {
     margin-bottom: 0px;
 }
+
 #sidebar ul.wpp-list {
     padding-left: 0;
 }
-#sidebar .popular-posts a.wpp-post-title{
+
+#sidebar .popular-posts a.wpp-post-title {
     color: #c5996c;
     font-family: "Open Sans";
     font-size: 18px;
@@ -309,7 +313,6 @@ div#calendar_wrap.calendar_wrap a {
 #sidebar .popular-posts .post-stats {
     margin-top: 23px;
 }
-
 
 #our-blog-title {
     border-bottom: 1px solid;
@@ -337,7 +340,7 @@ div#calendar_wrap.calendar_wrap a {
     line-height: 19.2px;
 }
 
-.post-date-number{
+.post-date-number {
     color: #191918;
     font-family: "Open Sans";
     font-size: 32px;
@@ -387,7 +390,7 @@ div#calendar_wrap.calendar_wrap a {
     padding-right: 48px;
 }
 
-.post-title-quote, .post-title-quote a  {
+.post-title-quote, .post-title-quote a {
     color: #191918;
     font-family: "Open Sans";
     font-size: 16px;
@@ -432,6 +435,7 @@ div#calendar_wrap.calendar_wrap a {
 .music-post h1 {
     margin: 0 auto;
 }
+
 .post-metadata-music {
     text-align: left;
     margin-top: 28px;
@@ -464,7 +468,7 @@ div#calendar_wrap.calendar_wrap a {
 }
 
 .global-content {
-    margin-bottom:100px;
+    margin-bottom: 100px;
 }
 
 .music-post {
@@ -477,8 +481,7 @@ div#calendar_wrap.calendar_wrap a {
     margin-right: 10px;
 }
 
-
-.post-title-standard, .post-title-standard a, .post-title-video, .post-title-video a  {
+.post-title-standard, .post-title-standard a, .post-title-video, .post-title-video a {
     margin: 0 auto;
     color: #c5996c;
     font-family: "Open Sans";
@@ -488,12 +491,12 @@ div#calendar_wrap.calendar_wrap a {
     text-align: left;
 }
 
-.post-metadata-standard, .post-metadata-video  {
+.post-metadata-standard, .post-metadata-video {
     text-align: left;
     margin-top: 28px;
 }
 
-.post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a, .post-metadata-video i, .post-metadata-video a{
+.post-metadata-music i, .post-metadata-music a, .post-metadata-standard i, .post-metadata-standard a, .post-metadata-video i, .post-metadata-video a {
     margin-right: 10px;
     color: #777777;
     font-size: 14px;
@@ -513,8 +516,7 @@ div#calendar_wrap.calendar_wrap a {
     text-align: left;
 }
 
-
-.post-standard-readmore a, .post-video-readmore a{
+.post-standard-readmore a, .post-video-readmore a {
     background-color: #1a1918;
     color: #ffffff;
     font-family: "Open Sans";
@@ -542,10 +544,10 @@ div#calendar_wrap.calendar_wrap a {
 }
 
 .mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
-//background: #f6f6f6 !important;
+/ / background: #f6f6f6 !important;
 }
 
-.mejs-horizontal-volume-current, .mejs-time-slider{
+.mejs-horizontal-volume-current, .mejs-time-slider {
     background-color: #c59a6d !important;
 }
 
@@ -590,7 +592,7 @@ div#calendar_wrap.calendar_wrap a {
     padding-left: 29px;
 }
 
-.footer-head h2{
+.footer-head h2 {
     color: #ffffff;
     font-family: "Bebas Neue";
     font-size: 56px;
@@ -644,15 +646,18 @@ div#calendar_wrap.calendar_wrap a {
 .video-section {
     position: relative;
     width: 100%;
-    max-height: 550px;
+    max-height: 350px;
     overflow: hidden;
 }
+
 #video-elem {
     width: 100%;
 }
+
 video::-webkit-media-controls {
-    display:none !important;
+    display: none !important;
 }
+
 .video-overlay {
     position: absolute;
     top: 0;
@@ -663,9 +668,11 @@ video::-webkit-media-controls {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .video-overlay:hover {
     opacity: 1;
 }
+
 .video-overlay h1 {
     position: absolute;
     left: 50%;
@@ -675,4 +682,288 @@ video::-webkit-media-controls {
     font-size: 3em;
     color: #000;
     text-align: center;
+}
+
+.content-of-article ul {
+    list-style-image: url(../images/bullet.jpg);
+}
+
+.content-of-article ol {
+    counter-reset: li; /* Initiate a counter */
+    margin-left: 0; /* Remove the default left margin */
+    padding-left: 0; /* Remove the default left padding */
+}
+
+.content-of-article ol > li {
+    position: relative; /* Create a positioning context */
+    margin: 0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding: 4px 8px; /* Add some spacing around the content */
+    list-style: none; /* Disable the normal item numbering */
+
+}
+
+.content-of-article ol > li:before {
+    content: counter(li); /* Use the counter as content */
+    counter-increment: li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position: absolute;
+    top: -2px;
+    left: -2em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right: 8px;
+    padding: 4px;
+    border-top: 2px solid #f6f6f6;
+    color: #191918;
+    background: #f6f6f6;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+}
+
+.content-of-article li ol,
+.content-of-article li ul {
+    margin-top: 6px;
+}
+
+.content-of-article ol ol li:last-child {
+    margin-bottom: 0;
+}
+
+.content-of-article p::first-letter {
+
+    color: #191918;
+
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 89.6px;
+
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.content-tags a {
+    background-color: #1a1918;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    padding: 10px 15px 10px 15px;
+}
+
+.content-of-article, .post-thumbnail, .single-post-excerpt, .social-share {
+    margin-bottom: 50px;
+}
+
+.content-tags {
+    margin-bottom: 100px;
+}
+
+.post-metadata-standard, .author-description {
+    margin-bottom: 30px;
+}
+
+
+.about-author {
+    padding: 30px 30px 30px 30px;
+    background-color: #f6f6f6;
+
+}
+
+.about-author-title {
+    color: #191918;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.author-description {
+    color: #191918;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.social-description a, i{
+    color: #777777;
+    font-family: "Font Awesome";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    margin-left: 1px;
+}
+
+.all-author-posts {
+    color: #777777;
+    font-family: "Open Sans - Semibold";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    /* Text style for "ALL, FROM," */
+    font-weight: 600;
+}
+
+.about-author-title:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 70px;
+    height: 1px;
+    background-color: #c69b6e;
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px;
+}
+
+#related_posts h3 {
+    color: #191918;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-transform: uppercase;
+}
+
+#related_posts h3:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 70px;
+    height: 1px;
+    background-color: #c69b6e;
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px;
+}
+
+
+.relatedcontent {
+    padding: 30px;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+
+}
+.relatedcontent h4 a {
+    color: #c5996c;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.2px;
+}
+
+.relatedcontent h4 a:after {
+    content: '';
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 70px;
+    height: 1px;
+    background-color: #c69b6e;
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px;
+}
+
+.rel-posts-excerpt {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    margin-bottom: 30px
+}
+
+
+.read-more-rel-post a{
+    background-color: #1a1918;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    padding: 10px 15px 10px 15px;
+}
+
+.rpbycat {
+    display: flex;
+}
+
+.comment-title, .comment-reply-title {
+    color: #191918;
+    font-family: "Bebas Neue";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+.comment-title:after,
+.comment-reply-title:after
+{
+    content: '';
+    display: block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 70px;
+    height: 1px;
+    background-color: #c69b6e;
+    border: solid #FFF;
+    border-width: 0 0px;
+    margin-top: 29px;
+}
+
+.comment-list {
+    list-style-type: none;
+}
+
+.comment {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.says {
+    display: none;
+}
+
+.fn {
+    text-transform: uppercase;
+}
+
+.reply a {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.4px;
+    text-transform: uppercase;
+    background-color: #c69b6e;
+    padding: 8px 16px 8px 16px;
+
+}
+
+.comment-form-comment label{
+    display: none;
+}
+
+.submit {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    padding: 20px 50px 20px 50px;
+    background-color: #c59a6d;
 }

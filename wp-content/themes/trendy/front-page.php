@@ -9,7 +9,9 @@
     </video>
 
     <div class="video-overlay">
-        <h1>This Is A Video Overlay</h1>
+        <h1>CATCHY SENTANCE
+            WITH VIDEO BACKGROUND</h1>
+
     </div>
 </div>
 
