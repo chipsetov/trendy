@@ -20,8 +20,8 @@
 
 
                         <div class="col-sm-2 left-dates"><img
-                                    src="<? echo get_template_directory_uri() . "/images/category-icon-standard.png" ?>"
-                                    alt="category-icon-standard.png">
+                                src="<? echo get_template_directory_uri() . "/images/category-icon-standard.png" ?>"
+                                alt="category-icon-standard.png">
                             <div class="post-date-number"><?php the_time('d'); ?></div>
                             <div class="post-date-mounth"><?php the_time('M'); ?></div>
                         </div>
@@ -72,15 +72,15 @@
                                             <div class="row">
                                                 <div class="col-sm-6 social-description">
                                                     <a href="<?php echo get_the_author_meta('facebook_profile'); ?>"><i
-                                                                class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                            class="fa fa-facebook" aria-hidden="true"></i></a>
                                                     <a href="<?php echo get_the_author_meta('twitter_profile'); ?>"><i
-                                                                class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                            class="fa fa-twitter" aria-hidden="true"></i></a>
                                                     <a href="<?php echo get_the_author_meta('google_profile'); ?>"><i
-                                                                class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                                            class="fa fa-google-plus" aria-hidden="true"></i></a>
                                                     <a href="<?php echo get_the_author_meta('linkedin_profile'); ?>/"><i
-                                                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                            class="fa fa-linkedin" aria-hidden="true"></i></a>
                                                     <a href="<?php echo get_the_author_meta('pinterest_profile'); ?>"><i
-                                                                class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                                            class="fa fa-pinterest" aria-hidden="true"></i></a>
                                                 </div>
 
 
