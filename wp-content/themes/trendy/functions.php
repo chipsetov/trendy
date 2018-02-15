@@ -24,30 +24,30 @@ function trendy_script_enqueue()
 //    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
 
-        //css
-        wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.4', 'all');
-        wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/custom.css', array(), '1.0.0', 'all');
-        //js
-        wp_enqueue_script('jquery');
-        wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
-        wp_enqueue_script('customjs', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
+    //css
+    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.4', 'all');
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/custom.css', array(), '1.0.0', 'all');
+    //js
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
+    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
 
-        wp_enqueue_style( 'googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext' );
-        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Bold.ttf' );
-        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Book.ttf' );
-        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Light.ttf' );
-        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Regular.ttf' );
-        wp_enqueue_style( 'bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Thin.ttf' );
-
-
+    wp_enqueue_style('googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext');
+    wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Bold.ttf');
+    wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Book.ttf');
+    wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Light.ttf');
+    wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Regular.ttf');
+    wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Thin.ttf');
 
 
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
-function enqueue_load_fa() {
 
-    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
+add_action('wp_enqueue_scripts', 'enqueue_load_fa');
+function enqueue_load_fa()
+{
+
+    wp_enqueue_style('load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 
 }
 
@@ -74,7 +74,8 @@ function build_tree_menu($items, $tree = null)
     }
     foreach ($items as $index => $item) {
         if (isset($tree->ID) == false && $item->menu_item_parent == 0 ||
-            (isset($tree->ID) && $item->menu_item_parent == $tree->ID)) {
+            (isset($tree->ID) && $item->menu_item_parent == $tree->ID)
+        ) {
             array_splice($items, $index, 1);
             build_tree_menu($items, $item);
             array_push($tree->children, $item);
@@ -93,11 +94,11 @@ function print_menu($tree)
 function print_menu_node($item)
 {
     return '<li>' .
-        '<a ' . 'href="' . $item->url . '">' .
-        do_shortcode($item->title) .
-        '</a>' .
-        print_menu($item) .
-        '</li>';
+    '<a ' . 'href="' . $item->url . '">' .
+    do_shortcode($item->title) .
+    '</a>' .
+    print_menu($item) .
+    '</li>';
 }
 
 function print_menu_nodes($items)
@@ -159,91 +160,122 @@ function awesome_widget_setup()
         )
     );
 
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 1',
-            'id' => 'sidebar-f-1',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 2',
-            'id' => 'sidebar-f-2',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 1',
+//            'id' => 'sidebar-f-1',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 2',
+//            'id' => 'sidebar-f-2',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
+//
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 3',
+//            'id' => 'sidebar-f-3',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
+//
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 5',
+//            'id' => 'sidebar-f-5',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
 
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 3',
-            'id' => 'sidebar-f-3',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 5',
-            'id' => 'sidebar-f-5',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 2-1',
-            'id' => 'sidebar-f-2-1',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
-
-    register_sidebar(
-        array(
-            'name' => 'footer sidebar 2-2',
-            'id' => 'sidebar-f-2-2',
-            'class' => 'custom',
-            'description' => 'Standard footer Sidebar',
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-            'after_widget' => '</aside>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
-    );
-
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 2-1',
+//            'id' => 'sidebar-f-2-1',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
+//
+//    register_sidebar(
+//        array(
+//            'name' => 'footer sidebar 2-2',
+//            'id' => 'sidebar-f-2-2',
+//            'class' => 'custom',
+//            'description' => 'Standard footer Sidebar',
+//            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//            'after_widget' => '</aside>',
+//            'before_title' => '<h2 class="widget-title">',
+//            'after_title' => '</h2>',
+//        )
+//    );
 
 
 }
 
 add_action('widgets_init', 'awesome_widget_setup');
 
+function true_register_multiple_sidebars()
+{
 
-function add_to_author_profile( $contactmethods ) {
+    register_sidebars(2, array(
+        'name' => 'footer sidebar 2 %d',
+        'id' => 'sidebar-f-2',
+        'class' => 'custom',
+        'description' => 'Standard footer Sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebars(5, array(
+            'name' => 'footer sidebar %d',
+            'id' => 'sidebar-f',
+            'class' => 'custom',
+            'description' => 'Standard footer Sidebar',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget' => '</aside>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        )
+    );
+
+
+}
+
+add_action('widgets_init', 'true_register_multiple_sidebars');
+
+
+function add_to_author_profile($contactmethods)
+{
 
     $contactmethods['google_profile'] = 'Google Profile URL';
     $contactmethods['twitter_profile'] = 'Twitter Profile URL';
@@ -253,5 +285,6 @@ function add_to_author_profile( $contactmethods ) {
 
     return $contactmethods;
 }
-add_filter( 'user_contactmethods', 'add_to_author_profile', 10, 1);
+
+add_filter('user_contactmethods', 'add_to_author_profile', 10, 1);
 
