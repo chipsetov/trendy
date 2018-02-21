@@ -72,59 +72,59 @@ fabric.properties
 
 # Created by https://www.gitignore.io/api/phpstorm
 
-### PhpStorm  /wp-content/themes/trendy/ ###
+### PhpStorm  wp-content/themes/trendy/ ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-/wp-content/themes/trendy/.idea/**/workspace.xml
-/wp-content/themes/trendy/.idea/**/tasks.xml
-/wp-content/themes/trendy/.idea/dictionaries
+wp-content/themes/trendy/.idea/**/workspace.xml
+wp-content/themes/trendy/.idea/**/tasks.xml
+wp-content/themes/trendy/.idea/dictionaries
 
 # Sensitive or high-churn files:
-/wp-content/themes/trendy/.idea/**/dataSources/
-/wp-content/themes/trendy/.idea/**/dataSources.ids
-/wp-content/themes/trendy/.idea/**/dataSources.xml
-/wp-content/themes/trendy/.idea/**/dataSources.local.xml
-/wp-content/themes/trendy/.idea/**/sqlDataSources.xml
-/wp-content/themes/trendy/.idea/**/dynamic.xml
-/wp-content/themes/trendy/.idea/**/uiDesigner.xml
+wp-content/themes/trendy/.idea/**/dataSources/
+wp-content/themes/trendy/.idea/**/dataSources.ids
+wp-content/themes/trendy/.idea/**/dataSources.xml
+wp-content/themes/trendy/.idea/**/dataSources.local.xml
+wp-content/themes/trendy/.idea/**/sqlDataSources.xml
+wp-content/themes/trendy/.idea/**/dynamic.xml
+wp-content/themes/trendy/.idea/**/uiDesigner.xml
 
 # Gradle:
-/wp-content/themes/trendy/.idea/**/gradle.xml
-/wp-content/themes/trendy/.idea/**/libraries
+wp-content/themes/trendy/.idea/**/gradle.xml
+wp-content/themes/trendy/.idea/**/libraries
 
 # CMake
-/wp-content/themes/trendy/cmake-build-debug/
+wp-content/themes/trendy/cmake-build-debug/
 
 # Mongo Explorer plugin:
-/wp-content/themes/trendy/.idea/**/mongoSettings.xml
+wp-content/themes/trendy/.idea/**/mongoSettings.xml
 
 ## File-based project format:
-/wp-content/themes/trendy/*.iws
+wp-content/themes/trendy/*.iws
 
 ## Plugin-specific files:
 
 # IntelliJ
-/wp-content/themes/trendy/out/
+wp-content/themes/trendy/out/
 
 # mpeltonen/sbt-idea plugin
-/wp-content/themes/trendy/.idea_modules/
+wp-content/themes/trendy/.idea_modules/
 
 # JIRA plugin
-/wp-content/themes/trendy/atlassian-ide-plugin.xml
+wp-content/themes/trendy/atlassian-ide-plugin.xml
 
 # Cursive Clojure plugin
-/wp-content/themes/trendy/.idea/replstate.xml
+wp-content/themes/trendy/.idea/replstate.xml
 
 # Ruby plugin and RubyMine
-/wp-content/themes/trendy/.rakeTasks
+wp-content/themes/trendy/.rakeTasks
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
-/wp-content/themes/trendy/com_crashlytics_export_strings.xml
-/wp-content/themes/trendy/crashlytics.properties
-/wp-content/themes/trendy/crashlytics-build.properties
-/wp-content/themes/trendy/fabric.properties
+wp-content/themes/trendy/com_crashlytics_export_strings.xml
+wp-content/themes/trendy/crashlytics.properties
+wp-content/themes/trendy/crashlytics-build.properties
+wp-content/themes/trendy/fabric.properties
 
 ### PhpStorm Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
@@ -135,7 +135,7 @@ fabric.properties
 # *.ipr
 
 # Sonarlint plugin
-/wp-content/themes/trendy/.idea/sonarlint
+wp-content/themes/trendy/.idea/sonarlint
 
 
 # End of https://www.gitignore.io/api/phpstorm
