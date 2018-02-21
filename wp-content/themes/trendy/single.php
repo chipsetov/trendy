@@ -1,5 +1,8 @@
 <?php get_header(); ?>
+<?php
+if ( has_post_format( 'video' )) {
 
+?>
     <div class="row">
         <div class="container">
 
@@ -163,5 +166,5 @@
             </div>
         </div>
     </div>
-            
+            <?php } ?>
 <?php get_footer(); ?>
