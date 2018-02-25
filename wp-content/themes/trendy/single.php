@@ -14,10 +14,9 @@ if ( has_post_format( 'video' )) {
 
                     while (have_posts()): the_post(); ?>
                         <?php if (has_post_thumbnail()): ?>
-                            <!--                                --><?php //get_template_part('content', get_post_format()); ?>
-                            <?php echo get_post_format(49); ?>
 
-                            <div class="post-thumbnail"><?php the_post_thumbnail('spec_thumb_post'); ?></div>
+
+                            <div class="post-thumbnail"><?php the_post_thumbnail('spec_thumb_post', ['class' => 'img-responsive']); ?></div>
 
                         <?php endif; ?>
 

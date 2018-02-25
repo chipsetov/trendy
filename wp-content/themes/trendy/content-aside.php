@@ -1,5 +1,5 @@
 <div class="global-content">
-    <div class="thumbnail-img"><?php the_post_thumbnail('large'); ?></div>
+    <div class="thumbnail-img"><?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?></div>
     <div class="row">
         <div class="col-sm-2 left-dates"><img
                     src="<? echo get_template_directory_uri() . "/images/category-icon-standard.png" ?>"
