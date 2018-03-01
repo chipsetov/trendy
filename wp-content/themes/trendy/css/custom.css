@@ -854,6 +854,7 @@ video::-webkit-media-controls {
     padding: 30px;
     border: 1px solid #cccccc;
     background-color: #ffffff;
+    width: calc(50% - 10px);
 
 }
 .relatedcontent h4 a {
@@ -966,4 +967,10 @@ video::-webkit-media-controls {
     text-transform: uppercase;
     padding: 20px 50px 20px 50px;
     background-color: #c59a6d;
+}
+
+#related_posts_inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }

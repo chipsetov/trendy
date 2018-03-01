@@ -274,6 +274,7 @@ if (has_post_format('video')) { ?>
                                         $my_query = new wp_query($args);
                                         if ($my_query->have_posts()) {
                                             echo '<div id="related_posts"><h3>Related Posts</h3>';
+                                            echo '<div id="related_posts_inner">';
                                             while ($my_query->have_posts()) {
                                                 $my_query->the_post(); ?>
 
@@ -293,6 +294,7 @@ if (has_post_format('video')) { ?>
 
                                                 <?
                                             }
+                                            echo '</div>';
                                             echo '</div>';
                                         }
                                     }
