@@ -974,3 +974,68 @@ video::-webkit-media-controls {
     justify-content: space-between;
     flex-direction: row;
 }
+
+/* FRONT PAGE */
+#designing {
+    background-color: #1b1a18;
+    display: flex;
+}
+
+.navbar.navbar-default {
+    margin-bottom: 0px;
+}
+
+.titles {
+    padding-top: 231px;
+    margin: auto;
+}
+
+.titles h1 {
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    /*font-size: 128px;*/
+    font-size: 7vw;
+    font-weight: 400;
+    line-height: 153.6px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titles p {
+    color: #ffffff;
+    font-family: "Open Sans - Semibold";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titles hr {
+    width: 170px;
+    height: 4px;
+    background-color: #c69b6e;
+    border-top: 0px;
+}
+
+#designing .button {
+    font-family: "Font Awesome";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+    border: 1px solid #ffffff;
+    padding: 0px 11px 0px 11px;
+
+}
+
+#designing .button i {
+    color: #c69b6e;
+
+}
+
+.buttonblock {
+    text-align: center;
+    margin-top: 180px;
+    margin-bottom: 50px;
+}
