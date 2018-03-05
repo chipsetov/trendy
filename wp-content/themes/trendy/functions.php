@@ -293,3 +293,51 @@ function add_to_author_profile($contactmethods)
 
 add_filter('user_contactmethods', 'add_to_author_profile', 10, 1);
 
+
+
+/*
+	==========================================
+	 Custom Post Type
+	==========================================
+*/
+function awesome_custom_post_type (){
+
+    $labels = array(
+        'name' => 'Team',
+        'singular_name' => 'Team',
+        'add_new' => 'Add team member',
+        'all_items' => 'All team members',
+        'add_new_item' => 'Add team member',
+        'edit_item' => 'Edit team member profile',
+        'new_item' => 'New team member',
+        'view_item' => 'View team member',
+        'search_item' => 'Search team member',
+        'not_found' => 'No items found',
+        'not_found_in_trash' => 'No items found in trash',
+        'parent_item_colon' => 'Parent Item'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'menu_icon' => 'dashicons-businessman',
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        //'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type('team_memver',$args);
+}
+add_action('init','awesome_custom_post_type');
+
