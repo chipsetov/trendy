@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<div class="error404">
 <!-- Load page -->
 <div class="animationload">
     <div class="loader">
@@ -48,5 +48,5 @@
     <!-- end container -->
 </div>
 <!-- end Content Wrapper -->
-
+</div>
 <?php get_footer(); ?>

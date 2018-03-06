@@ -110,14 +110,14 @@ Distributor: http://bootstraptema.ru/
     display: none;
     visibility: hidden;
 }
-.error404 body.light{
+body.light{
     background-color: #f0ff79;
 }
-.error404 body.light #light{
+body.light #light{
     display: block;
     visibility: visible;
 }
-.error404 body.light #dark{
+body.light #dark{
     display: none;
     visibility: hidden;
 }
@@ -148,13 +148,13 @@ Distributor: http://bootstraptema.ru/
 .error404 .text-l{
     display: none;
 }
-.error404 .light .text-l{
+.light .text-l{
     display: inline-block;
 }
 .error404 .text-d{
     display: inline-block;
 }
-.error404 .light .text-d{
+.light .text-d{
     display: none;
 }
 
@@ -206,7 +206,7 @@ Distributor: http://bootstraptema.ru/
     left: -24px;
     top: 21px;
 }
-.error404 .light .switcher .text{
+.light .switcher .text{
     color: #343f69;
 }
 
