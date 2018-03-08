@@ -188,7 +188,7 @@ class WPP_Output {
         $post_comments = $this->get_comments( $post_object );
 
         // Post meta
-        $post_meta = join( ' | ', $this->get_metadata( $post_object ) );
+        $post_meta = join( '', $this->get_metadata( $post_object ) );
 
         // Build custom HTML output
         if ( $this->options['markup']['custom_html'] ) {
@@ -737,7 +737,7 @@ class WPP_Output {
             }
             else {
                 $views_text = sprintf(
-                    _n( '1 view', '%s views', $pageviews, 'wordpress-popular-posts' ),
+                    _n( '1 view', '%s ', $pageviews, 'wordpress-popular-posts' ),
                     number_format_i18n( $pageviews )
                 );
             }
@@ -748,10 +748,10 @@ class WPP_Output {
             if ( $this->options['stats_tag']['comment_count'] )
                 $stats[] = '<span class="wpp-comments">' . $comments_text . '</span>'; // First comments count
             if ( $this->options['stats_tag']['views'] )
-                $stats[] = '<span class="wpp-views">' . $views_text . "</span>"; // ... then views
+                $stats[] = '<span class="wpp-views"><i class="fa fa-eye"> ' . $views_text . "</i></span>"; // ... then views
         } else {
             if ( $this->options['stats_tag']['views'] )
-                $stats[] = '<span class="wpp-views">' . $views_text . "</span>"; // First views count
+                $stats[] = '<span class="wpp-views"><i class="fa fa-eye"> ' . $views_text . "</i></span>"; // First views count
             if ( $this->options['stats_tag']['comment_count'] )
                 $stats[] = '<span class="wpp-comments">' . $comments_text . '</span>'; // ... then comments
         }
@@ -760,7 +760,7 @@ class WPP_Output {
         if ( $this->options['stats_tag']['author'] ) {
             $author = $this->get_author( $post_object );
             $display_name = '<a href="' . get_author_posts_url( $post_object->uid ) . '">' . $author . '</a>';
-            $stats[] = '<span class="wpp-author">' . sprintf(__('by %s', 'wordpress-popular-posts'), $display_name).'</span>';
+            $stats[] = '<span class="wpp-author"><i class="fa fa-user" aria-hidden="true">' . sprintf(__(' %s', 'wordpress-popular-posts'), $display_name).'</i></span>';
         }
 
         // date

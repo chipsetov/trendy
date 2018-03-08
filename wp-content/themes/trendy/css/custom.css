@@ -1039,3 +1039,7 @@ video::-webkit-media-controls {
     margin-top: 180px;
     margin-bottom: 50px;
 }
+
+.wpp-author {
+    margin-left: 20px;
+}
