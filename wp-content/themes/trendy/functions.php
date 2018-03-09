@@ -337,7 +337,116 @@ function awesome_custom_post_type (){
         'menu_position' => 5,
         'exclude_from_search' => false
     );
-    register_post_type('team_memver',$args);
+    register_post_type('team_member',$args);
 }
 add_action('init','awesome_custom_post_type');
 
+/*
+	==========================================
+	 Meta Box
+	==========================================
+*/
+function global_notice_meta_box() {
+
+    add_meta_box(
+        'global-notice',
+        __( 'Social links', 'sitepoint' ),
+        'global_notice_meta_box_callback',
+        'team_member'
+    );
+}
+
+add_action( 'add_meta_boxes', 'global_notice_meta_box' );
+
+function global_notice_meta_box_callback( $post ) {
+
+    // Add a nonce field so we can check for it later.
+    wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
+
+    $value = get_post_meta( $post->ID, '_global_notice', true );
+    $fb_value = get_post_meta( $post->ID, '_fb', true );
+    $tw_value = get_post_meta( $post->ID, '_tw', true );
+    $gp_value = get_post_meta( $post->ID, '_gp', true );
+    $in_value = get_post_meta( $post->ID, '_in', true );
+    $pin_value = get_post_meta( $post->ID, '_pin', true );
+
+    echo '<textarea style="width:100%" id="global_notice" name="global_notice">' . esc_attr( $value ) . '</textarea>';
+    echo '<label for="fb">Facebook</label><input type="text" id="fb "name="fb" value="' . esc_attr( $fb_value ) . '">';
+    echo '<label for="tw">Twitter</label><input type="text" id="tw "name="tw" value="' . esc_attr( $tw_value ) . '">';
+    echo '<label for="gp">Google+</label><input type="text" id="gp "name="gp" value="' . esc_attr( $gp_value ) . '">';
+    echo '<label for="in">LinkedIn</label><input type="text" id="in "name="in" value="' . esc_attr( $in_value ) . '">';
+    echo '<label for="pin">LinkedIn</label><input type="text" id="pin "name="pin" value="' . esc_attr( $pin_value ) . '">';
+}
+
+function save_global_notice_meta_box_data( $post_id ) {
+
+    // Check if our nonce is set.
+    if ( ! isset( $_POST['global_notice_nonce'] ) ) {
+        return;
+    }
+
+    // Verify that the nonce is valid.
+    if ( ! wp_verify_nonce( $_POST['global_notice_nonce'], 'global_notice_nonce' ) ) {
+        return;
+    }
+
+    // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    // Check the user's permissions.
+    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+
+        if ( ! current_user_can( 'edit_page', $post_id ) ) {
+            return;
+        }
+
+    }
+    else {
+
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
+        }
+    }
+
+    /* OK, it's safe for us to save the data now. */
+
+    // Make sure that it is set.
+    if ( ! isset( $_POST['global_notice'] ) ) {
+        return;
+    }
+
+    // Sanitize user input.
+    $my_data = sanitize_text_field( $_POST['global_notice'] );
+    $fb_data = sanitize_text_field( $_POST['fb'] );
+    $tw_data = sanitize_text_field( $_POST['tw'] );
+    $gp_data = sanitize_text_field( $_POST['gp'] );
+    $in_data = sanitize_text_field( $_POST['in'] );
+    $pin_data = sanitize_text_field( $_POST['pin'] );
+
+    // Update the meta field in the database.
+    update_post_meta( $post_id, '_global_notice', $my_data );
+    update_post_meta( $post_id, '_fb', $fb_data );
+    update_post_meta( $post_id, '_tw', $tw_data );
+    update_post_meta( $post_id, '_gp', $gp_data );
+    update_post_meta( $post_id, '_in', $in_data );
+    update_post_meta( $post_id, '_pin', $pin_data );
+}
+
+add_action( 'save_post', 'save_global_notice_meta_box_data' );
+
+//function global_notice_before_post( $content ) {
+//
+//    global $post;
+//
+//    // retrieve the global notice for the current post
+//    $global_notice = esc_attr( get_post_meta( $post->ID, '_global_notice', true ) );
+//
+//    $notice = "<div class='sp_global_notice'>$global_notice</div>";
+//
+//    return $notice . $content;
+//
+//}
+//
+//add_filter( 'the_content', 'global_notice_before_post' );

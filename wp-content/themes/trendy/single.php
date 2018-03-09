@@ -1,5 +1,11 @@
 <?php get_header(); ?>
+
+
+    stndrt
+
 <?php
+
+
 if (has_post_format('video')) { ?>
     <div class="row">
         <div class="container">

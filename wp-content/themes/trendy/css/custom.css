@@ -1043,3 +1043,30 @@ video::-webkit-media-controls {
 .wpp-author {
     margin-left: 20px;
 }
+
+#ourteam .container {
+    /*display: flex;*/
+}
+
+#ourteam img {
+    padding: 9px;
+    border: 1px solid #cccccc;
+}
+
+#ourteam .team-member-name {
+    color: #c59a6d;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    text-transform: uppercase;
+}
+
+#ourteam .team-member-position {
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+}
