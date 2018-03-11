@@ -769,7 +769,6 @@ video::-webkit-media-controls {
     margin-bottom: 30px;
 }
 
-
 .about-author {
     padding: 30px 30px 30px 30px;
     background-color: #f6f6f6;
@@ -794,7 +793,7 @@ video::-webkit-media-controls {
     line-height: 22.4px;
 }
 
-.social-description a, i{
+.social-description a, i {
     color: #777777;
     font-family: "Font Awesome";
     font-size: 12px;
@@ -849,7 +848,6 @@ video::-webkit-media-controls {
     margin-top: 29px;
 }
 
-
 .relatedcontent {
     padding: 30px;
     border: 1px solid #cccccc;
@@ -857,6 +855,7 @@ video::-webkit-media-controls {
     width: calc(50% - 10px);
 
 }
+
 .relatedcontent h4 a {
     color: #c5996c;
     font-family: "Open Sans";
@@ -886,8 +885,7 @@ video::-webkit-media-controls {
     margin-bottom: 30px
 }
 
-
-.read-more-rel-post a{
+.read-more-rel-post a {
     background-color: #1a1918;
     color: #ffffff;
     font-family: "Open Sans";
@@ -910,8 +908,7 @@ video::-webkit-media-controls {
 }
 
 .comment-title:after,
-.comment-reply-title:after
-{
+.comment-reply-title:after {
     content: '';
     display: block;
     vertical-align: middle;
@@ -934,6 +931,7 @@ video::-webkit-media-controls {
     padding: 30px;
     margin-bottom: 30px;
 }
+
 .says {
     display: none;
 }
@@ -954,7 +952,7 @@ video::-webkit-media-controls {
 
 }
 
-.comment-form-comment label{
+.comment-form-comment label {
     display: none;
 }
 
@@ -1044,6 +1042,10 @@ video::-webkit-media-controls {
     margin-left: 20px;
 }
 
+.wpp-author a {
+    color: #777777;
+}
+
 #ourteam .container {
     /*display: flex;*/
 }
@@ -1070,3 +1072,50 @@ video::-webkit-media-controls {
     line-height: 19.6px;
     text-transform: uppercase;
 }
+
+#rcps_submit {
+    padding: 17px 30px;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    background-color: #c5996c;
+
+}
+
+#rcps_submit i{
+    color: #fff;
+    margin-right: 10px;
+}
+
+#rcps_contact_email {
+    border: 1px solid #cccccc;
+    background-color: #f6f6f6;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+#rcps_contact_email::-webkit-input-placeholder {
+    color: #777777;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    text-transform: uppercase;
+    padding: 30px;
+}
+
+
+.subscription-wdg {
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    padding: 30px 30px;
+}
+
+.subscription-wdg-desc {
+    margin-bottom: 27px;
+}
+

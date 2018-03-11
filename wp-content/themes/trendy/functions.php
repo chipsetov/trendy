@@ -450,3 +450,10 @@ add_action( 'save_post', 'save_global_notice_meta_box_data' );
 //}
 //
 //add_filter( 'the_content', 'global_notice_before_post' );
+
+/*
+	==========================================
+	 Subscribe block
+	==========================================
+*/
+
