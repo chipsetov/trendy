@@ -140,3 +140,5 @@ wp-content/themes/trendy/.idea/sonarlint
 
 
 # End of https://www.gitignore.io/api/phpstorm
+
+wp-content/uploads/*
