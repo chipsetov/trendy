@@ -20,45 +20,45 @@
 <section id="ourteam">
     <div class="container">
         <div class="row">
-        <?php
-        $query = new WP_Query(array('post_type' => 'team_member', 'posts_per_page' => 4, 'orderby' => array('date' => 'DESC')));
-        while ($query->have_posts()) {
-            echo "<div class=\"col-md-3\">";
-            echo '<div class="team-member-person">';
-            $query->the_post();
-            the_post_thumbnail(array(150, 198));
-            echo '<div class="team-member-bio">';
-            echo '<div class="team-member-row">';
-            $imageContent = get_the_content();
-            $stripped = strip_tags($imageContent, '<p> <a>'); //replace <p> and <a> with whatever tags you want to keep after the strip
-            echo the_title('<span class="team-member-name">','</span>', true) . " / " . "<span class='team-member-position'>" . $stripped . "</span>" ;
-            echo "</div>";
-            $true_baz = get_post_meta($query->post->ID, '_global_notice')[0];
+            <?php
+            $query = new WP_Query(array('post_type' => 'team_member', 'posts_per_page' => 4, 'orderby' => array('date' => 'DESC')));
+            while ($query->have_posts()) {
+                echo "<div class=\"col-md-3\">";
+                echo '<div class="team-member-person">';
+                $query->the_post();
+                the_post_thumbnail(array(150, 198));
+                echo '<div class="team-member-bio">';
+                echo '<div class="team-member-row">';
+                $imageContent = get_the_content();
+                $stripped = strip_tags($imageContent, '<p> <a>'); //replace <p> and <a> with whatever tags you want to keep after the strip
+                echo the_title('<span class="team-member-name">', '</span>', true) . " / " . "<span class='team-member-position'>" . $stripped . "</span>";
+                echo "</div>";
+                $true_baz = get_post_meta($query->post->ID, '_global_notice')[0];
 
 //            if (!empty($true_baz = get_post_meta($query->post->ID, '_global_notice')[0])) {
 //                echo $true_baz;
 //            }
-            echo '<div class="team-member-social">';
-            if (!empty($true_baz = get_post_meta($query->post->ID, '_fb')[0])) {
-                echo "<a href=\"$true_baz\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a>";
-            }
+                echo '<div class="team-member-social">';
+                if (!empty($true_baz = get_post_meta($query->post->ID, '_fb')[0])) {
+                    echo "<a href=\"$true_baz\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a>";
+                }
 
-            if (!empty($true_baz = get_post_meta($query->post->ID, '_tw')[0])) {
-                echo "<a href=\"$true_baz\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>";
-            }
+                if (!empty($true_baz = get_post_meta($query->post->ID, '_tw')[0])) {
+                    echo "<a href=\"$true_baz\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a>";
+                }
 
-            if (!empty($true_baz = get_post_meta($query->post->ID, '_gp')[0])) {
-                echo "<a href=\"$true_baz\"><i class=\"fa fa-google-plus\" aria-hidden=\"true\"></i></a>";
-            }
+                if (!empty($true_baz = get_post_meta($query->post->ID, '_gp')[0])) {
+                    echo "<a href=\"$true_baz\"><i class=\"fa fa-google-plus\" aria-hidden=\"true\"></i></a>";
+                }
 
-            if (!empty($true_baz = get_post_meta($query->post->ID, '_in')[0])) {
-                echo "<a href=\"$true_baz\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></a>";
-            }
+                if (!empty($true_baz = get_post_meta($query->post->ID, '_in')[0])) {
+                    echo "<a href=\"$true_baz\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></a>";
+                }
 
-            if (!empty($true_baz = get_post_meta($query->post->ID, '_pin')[0])) {
-                echo "<a href=\"$true_baz\"><i class=\"fa fa-pinterest\" aria-hidden=\"true\"></i></a>";
-            }
-            echo "</div>";
+                if (!empty($true_baz = get_post_meta($query->post->ID, '_pin')[0])) {
+                    echo "<a href=\"$true_baz\"><i class=\"fa fa-pinterest\" aria-hidden=\"true\"></i></a>";
+                }
+                echo "</div>";
 
 //var_dump($true_baz);
 //            if($true_baz== "_global_notice") {
@@ -67,13 +67,29 @@
 //                //error
 //                echo "error";
 //            }
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-        }
-        ?>
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+            }
+            ?>
         </div>
 
+    </div>
+</section>
+<section class="pricing-table">
+    <div class="container">
+    <div class="col-md-3">
+        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+    </div>
+    <div class="col-md-3">
+        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+    </div>
+    <div class="col-md-3">
+        <?php echo do_shortcode('[price_best name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+    </div>
+    <div class="col-md-3">
+        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+    </div>
     </div>
 </section>
 

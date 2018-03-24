@@ -457,3 +457,96 @@ add_action( 'save_post', 'save_global_notice_meta_box_data' );
 	==========================================
 */
 
+
+
+/*
+	==========================================
+	 Pricing table block
+	==========================================
+*/
+
+function prices_basic_func($atts) {
+    $atts = shortcode_atts( array(
+        'name' => '',
+        'price' => '',
+        'term' => '',
+        'advantage1'   => '',
+        'advantage2' => '',
+        'advantage3'   => '',
+        'advantage4' => '',
+        'advantage5'   => '',
+        'linkname' => '',
+        'href' => '',
+    ), $atts );
+    return '
+
+    <div class="pricing_table">
+        <div class="pricing_table_name">
+            '. $atts['name'] .'
+        </div>
+        <div class="pricing_table_price">
+        '. $atts['price'] .'
+        </div>
+        <div class="pricing_table_term">
+        '. $atts['term'] .'
+        </div>
+        
+        <div class="pricing_table_advantages">
+            <p>'. $atts['advantage1'] .'</p>
+            <p>'. $atts['advantage2'] .'</p>
+            <p>'. $atts['advantage3'] .'</p>
+            <p>'. $atts['advantage4'] .'</p>
+            <p>'. $atts['advantage5'] .'</p>
+        </div>
+        <div class="pricing_table_btn">
+            <a href="' . $atts['href'] . '">'. $atts['linkname'] .'</a>
+        </div>
+    </div>
+
+';
+}
+
+add_shortcode('price_basic','prices_basic_func' );
+
+function prices_best_func($atts) {
+    $atts = shortcode_atts( array(
+        'name' => '',
+        'price' => '',
+        'term' => '',
+        'advantage1'   => '',
+        'advantage2' => '',
+        'advantage3'   => '',
+        'advantage4' => '',
+        'advantage5'   => '',
+        'linkname' => '',
+        'href' => '',
+    ), $atts );
+    return '
+
+    <div class="pricing_table_best">
+        <div class="pricing_table_name">
+            '. $atts['name'] .'
+        </div>
+        <div class="pricing_table_price">
+        '. $atts['price'] .'
+        </div>
+        <div class="pricing_table_term">
+        '. $atts['term'] .'
+        </div>
+        
+        <div class="pricing_table_advantages">
+            <p>'. $atts['advantage1'] .'</p>
+            <p>'. $atts['advantage2'] .'</p>
+            <p>'. $atts['advantage3'] .'</p>
+            <p>'. $atts['advantage4'] .'</p>
+            <p>'. $atts['advantage5'] .'</p>
+        </div>
+        <div class="pricing_table_btn">
+            <a href="' . $atts['href'] . '">'. $atts['linkname'] .'</a>
+        </div>
+    </div>
+
+';
+}
+
+add_shortcode('price_best','prices_best_func' );
