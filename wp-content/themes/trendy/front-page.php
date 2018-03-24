@@ -78,18 +78,18 @@
 </section>
 <section class="pricing-table">
     <div class="container">
-    <div class="col-md-3">
-        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
-    </div>
-    <div class="col-md-3">
-        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
-    </div>
-    <div class="col-md-3">
-        <?php echo do_shortcode('[price_best name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
-    </div>
-    <div class="col-md-3">
-        <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
-    </div>
+        <div class="col-md-3">
+            <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+        </div>
+        <div class="col-md-3">
+            <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+        </div>
+        <div class="col-md-3">
+            <?php echo do_shortcode('[price_best name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+        </div>
+        <div class="col-md-3">
+            <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+        </div>
     </div>
 </section>
 
@@ -104,6 +104,72 @@
             WITH VIDEO BACKGROUND</h1>
 
     </div>
+</section>
+<section class="some-cool-facts">
+    <div class="container">
+        <div class="title">
+
+            <h1>SOME COOL FACTS</h1>
+            <p>Duis vitae velit mollis, congue nisi dignissim, pellentesque lorem</p>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="equal-height-container">
+                        <div class="first">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="second">
+                            <span class="second-a count">120</span>
+                            <div class="second-b">HAPPY CLIENTS</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="equal-height-container">
+                        <div class="first">
+                            <i class="fa fa-copy"></i>
+                        </div>
+                        <div class="second">
+                            <span class="second-a count">551</span>
+                            <div class="second-b">AWESOME PROJECTS</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="equal-height-container">
+                        <div class="first">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <div class="second">
+                            <div class="second-a">
+                            <span class="count">95</span>K
+                            </div>
+                            <div class="second-b">WORKING HOURS</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="equal-height-container">
+                        <div class="first">
+                            <i class="fa fa-coffee"></i>
+                        </div>
+                        <div class="second">
+                            <span class="second-a count" id="decimal"></span>
+                            <div class="second-b">COFFEES DRINKED</div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </section>
 
 

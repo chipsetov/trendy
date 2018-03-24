@@ -36,6 +36,7 @@ function trendy_script_enqueue()
     wp_enqueue_script('jquery.nicescroll404.min', get_template_directory_uri() . '/js/jquery.nicescroll404.min.js', array(), '1.0.0', true);
     wp_enqueue_script('modernizr.custom404', get_template_directory_uri() . '/js/modernizr.custom404.js', array(), '1.0.0', true);
     wp_enqueue_script('scripts404', get_template_directory_uri() . '/js/scripts404.js', array(), '1.0.0', true);
+    wp_enqueue_script('animate-number', get_template_directory_uri() . '/js/animate/jquery.animateNumber.js', array(), '1.0.0', true);
 
 
     wp_enqueue_style('googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext');
