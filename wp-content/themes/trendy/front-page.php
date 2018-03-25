@@ -17,6 +17,33 @@
     </div>
 
 </section>
+<section id="about-us">
+    <div id="ajax-posts" class="row">
+        <?php
+        $postsPerPage = 3;
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => $postsPerPage,
+            'cat' => 8
+        );
+
+        $loop = new WP_Query($args);
+
+        while ($loop->have_posts()) : $loop->the_post();
+            ?>
+
+            <div class="small-12 large-4 columns">
+                <h1><?php the_title(); ?></h1>
+                <p><?php the_content(); ?></p>
+            </div>
+
+            <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
+    </div>
+    <div id="more_posts">Load More</div>
+</section>
 <section id="ourteam">
     <div class="container">
         <div class="row">
@@ -89,6 +116,7 @@
         </div>
         <div class="col-md-3">
             <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
+            <?php echo do_shortcode('[testimonials]'); ?>
         </div>
     </div>
 </section>
@@ -104,6 +132,26 @@
             WITH VIDEO BACKGROUND</h1>
 
     </div>
+</section>
+<section id="ourclients">
+    <div class="container">
+        <div class="rowr">
+            <div class="your-class">
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+
+            </div>
+        </div>
+    </div>
+
 </section>
 <section class="some-cool-facts">
     <div class="container">
@@ -146,7 +194,7 @@
                         </div>
                         <div class="second">
                             <div class="second-a">
-                            <span class="count">95</span>K
+                                <span class="count">95</span>K
                             </div>
                             <div class="second-b">WORKING HOURS</div>
 
@@ -176,5 +224,22 @@
 <div id="contact-us">
 
 </div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('.your-class').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: false,
+            prevArrow: false,
+            nextArrow: false,
+        });
+    });
+
+
+</script>
 <?php get_footer(); ?>

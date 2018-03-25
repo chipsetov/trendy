@@ -29,6 +29,7 @@ function trendy_script_enqueue()
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/custom.css', array(), '1.0.0', 'all');
     wp_enqueue_style('respons404', get_template_directory_uri() . '/css/respons404.css', array(), '1.0.0', 'all');
     wp_enqueue_style('style404', get_template_directory_uri() . '/css/style404.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('sclick-css', get_template_directory_uri() . '/css/slick.css', array(), '1.0.0', 'all');
     //js
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
@@ -37,6 +38,7 @@ function trendy_script_enqueue()
     wp_enqueue_script('modernizr.custom404', get_template_directory_uri() . '/js/modernizr.custom404.js', array(), '1.0.0', true);
     wp_enqueue_script('scripts404', get_template_directory_uri() . '/js/scripts404.js', array(), '1.0.0', true);
     wp_enqueue_script('animate-number', get_template_directory_uri() . '/js/animate/jquery.animateNumber.js', array(), '1.0.0', true);
+    wp_enqueue_script('slick-js', get_template_directory_uri() . '/js/slick.min.js', array(), '1.0.0', true);
 
 
     wp_enqueue_style('googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i&amp;subset=cyrillic,cyrillic-ext');
@@ -46,6 +48,8 @@ function trendy_script_enqueue()
     wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Regular.ttf');
     wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Thin.ttf');
 
+    wp_enqueue_script( 'ajax_custom_script',  get_stylesheet_directory_uri() . '/js/loadmoreposts.js', array('jquery') );
+    wp_localize_script( 'ajax_custom_script', 'frontendajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
 
 }
 
@@ -131,6 +135,8 @@ add_theme_support('post-formats', array('aside', 'video', 'audio', 'quote', 'gal
 add_theme_support('html5', array('search-form'));
 add_image_size('spec_thumb_post', 770, 400, true);
 add_image_size('spec_thumb_rel_post', 310, 162, true);
+
+
 
 /*
 	==========================================
@@ -551,3 +557,39 @@ function prices_best_func($atts) {
 }
 
 add_shortcode('price_best','prices_best_func' );
+
+
+function more_post_ajax(){
+
+    $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
+    $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
+
+    header("Content-Type: text/html");
+
+    $args = array(
+        'suppress_filters' => true,
+        'post_type' => 'post',
+        'posts_per_page' => $ppp,
+        'cat' => 18,
+        'paged'    => $page,
+    );
+
+    $loop = new WP_Query($args);
+
+    $out = '';
+
+    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+        $out .= '<div class="small-12 large-4 columns">
+                <h1>'.get_the_title().'</h1>
+                <p>'.get_the_content().'</p>
+         </div>';
+
+    endwhile;
+    endif;
+    wp_reset_postdata();
+    die($out);
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+

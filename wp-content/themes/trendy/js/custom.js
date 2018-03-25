@@ -70,3 +70,8 @@ jQuery.fn.animateNumber = function() {
         },
         15000
     )
+
+
+
+
+

@@ -1,0 +1,38 @@
+/**/
+
+.flexslider {
+	padding: 10px 20px;
+}
+.flexslider p:before {
+	display: block;
+	float: left;
+	margin: -60px 10px 60px 0;
+	font-size: 100px;
+	content: "“";
+	color: #bababa;
+	text-shadow: 0 1px 1px #909090;
+	font-family: Times New Roman;
+}
+.flexslider p {
+	font-size: 12px;
+}
+.flexslider img {
+	float: left;
+	margin-right: 15px;
+	box-shadow: none ! important;
+}
+body .flexslider h2 {
+	margin-top: 0;
+	clear: none;
+}
+.flexslider ul, .flexslider .flex-direction-nav {
+	list-style-type: none;
+}
+
+.flexslider .slides  li {
+	margin: 0 1px -90px 0;
+}
+
+body .flex-control-nav {
+	bottom: -10px;
+}
