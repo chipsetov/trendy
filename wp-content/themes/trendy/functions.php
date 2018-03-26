@@ -30,6 +30,7 @@ function trendy_script_enqueue()
     wp_enqueue_style('respons404', get_template_directory_uri() . '/css/respons404.css', array(), '1.0.0', 'all');
     wp_enqueue_style('style404', get_template_directory_uri() . '/css/style404.css', array(), '1.0.0', 'all');
     wp_enqueue_style('sclick-css', get_template_directory_uri() . '/css/slick.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('timeline-css', get_template_directory_uri() . '/css/style-timeline.css', array(), '1.0.0', 'all');
     //js
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
@@ -619,10 +620,22 @@ function more_post_ajax()
     $out = '';
 
     if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
-        $out .= '<div class="small-12 large-4 columns">
-                <h1>' . get_the_title() . '</h1>
-                <p>' . get_the_content() . '</p>
-         </div>';
+//        $out .= '<div class="small-12 large-4 columns">
+//                <h1>' . get_the_title() . '</h1>
+//                <p>' . get_the_content() . '</p>
+//         </div>';
+
+
+        $out .= ' 		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 3</h2>
+				<p>'. get_the_content() .'</p>
+				<span class="cd-date">Jan 24</span>
+			</div> <!-- cd-timeline-content -->
+		</div> ';
 
     endwhile;
     endif;

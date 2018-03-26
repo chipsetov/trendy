@@ -14,7 +14,7 @@ jQuery( document ).ready(function() {
             success: function (data) {
                 var $data = jQuery(data);
                 if ($data.length) {
-                    jQuery("#ajax-posts").append($data);
+                    jQuery("#cd-timeline").append($data);
                     jQuery("#more_posts").attr("disabled", false);
                 } else {
                     jQuery("#more_posts").attr("disabled", true);

@@ -55,7 +55,7 @@ class Test
         <div class="subscription-wdg">
             <div class="subscription-wdg-desc"><?= $atts['desc']; ?></div>
 
-            <div><input type="text" id="rcps_contact_email" name="rcps-email" placeholder="YOUR EMAIL ADDRSS"></input>
+            <div><input type="email" id="rcps_contact_email" name="rcps-email" placeholder="YOUR EMAIL ADDRSS"></input>
             </div>
             <br/>
             <div>
