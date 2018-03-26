@@ -646,3 +646,23 @@ function more_post_ajax()
 add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
 add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
 
+add_filter( 'the_content', 'tgm_io_shortcode_empty_paragraph_fix' );
+/**
+ * Filters the content to remove any extra paragraph or break tags
+ * caused by shortcodes.
+ *
+ * @since 1.0.0
+ *
+ * @param string $content  String of HTML content.
+ * @return string $content Amended string of HTML content.
+ */
+function tgm_io_shortcode_empty_paragraph_fix( $content ) {
+
+    $array = array(
+        '<div>['    => '[',
+        ']<p></p>'   => ']',
+        ']<br />' => ']'
+    );
+    return strtr( $content, $array );
+
+}
