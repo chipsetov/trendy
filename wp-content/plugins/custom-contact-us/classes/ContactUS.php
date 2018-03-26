@@ -36,12 +36,13 @@ class ContactUS
         ?>
         <div class="contactus-wdg">
 
-            <div><input type="text" id="contactus-plg-name" name="contactus-plg-name" placeholder="YOUR NAME"></input> </div>
-            <div><input type="text" id="contactus-plg-email" name="contactus-plg-email" placeholder="YOUR EMAIL"></input> </div>
-            <div><input type="text" id="contactus-plg-phone" name="contactus-plg-phone" placeholder="YOUR PHONE"></input> </div>
-            <div><input type="text" id="contactus-plg-message" name="contactus-plg-message" placeholder="THE MESSAGE"></input></div>
-            <br/>
-            <div>
+            <div class="first-row"><input type="text" id="contactus-plg-name" name="contactus-plg-name" placeholder="YOUR NAME"></input>
+                <input type="text" id="contactus-plg-email" name="contactus-plg-email" placeholder="YOUR EMAIL"></input>
+                <input type="text" id="contactus-plg-phone" name="contactus-plg-phone" placeholder="YOUR PHONE"></input>
+            </div>
+<!--            <div><input type="text" id="contactus-plg-message" name="contactus-plg-message" placeholder="THE MESSAGE"></input></div>-->
+            <div class="second-row"><textarea id="contactus-plg-message" name="contactus-plg-message" cols="40" rows="5" placeholder="THE MESSAGE"></textarea></div>
+            <div class="submit-btn-class">
                 <button type="button" id="contactus-plg-name-submit">Send the message</button>
             </div>
         </div>
@@ -84,11 +85,14 @@ class ContactUS
 
 
     function test_init(){
-        echo "<h1>Subscribers emails</h1>";?>
+        echo "<h1>Contact us list</h1>";?>
         <table border="1">
         <tr>
             <th>id</th>
             <th>email</th>
+            <th>name</th>
+            <th>phone</th>
+            <th>message</th>
         </tr>
         <?php
         global $wpdb;

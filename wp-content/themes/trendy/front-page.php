@@ -37,7 +37,7 @@
                 <p><?php the_content(); ?></p>
             </div>
 
-            <?php
+        <?php
         endwhile;
         wp_reset_postdata();
         ?>
@@ -220,10 +220,11 @@
 
 </section>
 
-
-<div id="contact-us">
-
-</div>
+<section id="contact-us">
+    <div class="container">
+        <?php echo do_shortcode('[contactus-display-form]'); ?>
+    </div>
+</section>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
