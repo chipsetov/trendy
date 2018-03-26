@@ -48,8 +48,8 @@ function trendy_script_enqueue()
     wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Regular.ttf');
     wp_enqueue_style('bebas-bold', get_template_directory_uri() . '/fonts/BebasNeue-Thin.ttf');
 
-    wp_enqueue_script( 'ajax_custom_script',  get_stylesheet_directory_uri() . '/js/loadmoreposts.js', array('jquery') );
-    wp_localize_script( 'ajax_custom_script', 'frontendajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+    wp_enqueue_script('ajax_custom_script', get_stylesheet_directory_uri() . '/js/loadmoreposts.js', array('jquery'));
+    wp_localize_script('ajax_custom_script', 'frontendajax', array('ajaxurl' => admin_url('admin-ajax.php')));
 
 }
 
@@ -104,11 +104,11 @@ function print_menu($tree)
 function print_menu_node($item)
 {
     return '<li>' .
-    '<a ' . 'href="' . $item->url . '">' .
-    do_shortcode($item->title) .
-    '</a>' .
-    print_menu($item) .
-    '</li>';
+        '<a ' . 'href="' . $item->url . '">' .
+        do_shortcode($item->title) .
+        '</a>' .
+        print_menu($item) .
+        '</li>';
 }
 
 function print_menu_nodes($items)
@@ -135,7 +135,6 @@ add_theme_support('post-formats', array('aside', 'video', 'audio', 'quote', 'gal
 add_theme_support('html5', array('search-form'));
 add_image_size('spec_thumb_post', 770, 400, true);
 add_image_size('spec_thumb_rel_post', 310, 162, true);
-
 
 
 /*
@@ -301,13 +300,13 @@ function add_to_author_profile($contactmethods)
 add_filter('user_contactmethods', 'add_to_author_profile', 10, 1);
 
 
-
 /*
 	==========================================
 	 Custom Post Type
 	==========================================
 */
-function awesome_custom_post_type (){
+function awesome_custom_post_type()
+{
 
     $labels = array(
         'name' => 'Team',
@@ -344,75 +343,78 @@ function awesome_custom_post_type (){
         'menu_position' => 5,
         'exclude_from_search' => false
     );
-    register_post_type('team_member',$args);
+    register_post_type('team_member', $args);
 }
-add_action('init','awesome_custom_post_type');
+
+add_action('init', 'awesome_custom_post_type');
 
 /*
 	==========================================
 	 Meta Box
 	==========================================
 */
-function global_notice_meta_box() {
+function global_notice_meta_box()
+{
 
     add_meta_box(
         'global-notice',
-        __( 'Social links', 'sitepoint' ),
+        __('Social links', 'sitepoint'),
         'global_notice_meta_box_callback',
         'team_member'
     );
 }
 
-add_action( 'add_meta_boxes', 'global_notice_meta_box' );
+add_action('add_meta_boxes', 'global_notice_meta_box');
 
-function global_notice_meta_box_callback( $post ) {
+function global_notice_meta_box_callback($post)
+{
 
     // Add a nonce field so we can check for it later.
-    wp_nonce_field( 'global_notice_nonce', 'global_notice_nonce' );
+    wp_nonce_field('global_notice_nonce', 'global_notice_nonce');
 
-    $value = get_post_meta( $post->ID, '_global_notice', true );
-    $fb_value = get_post_meta( $post->ID, '_fb', true );
-    $tw_value = get_post_meta( $post->ID, '_tw', true );
-    $gp_value = get_post_meta( $post->ID, '_gp', true );
-    $in_value = get_post_meta( $post->ID, '_in', true );
-    $pin_value = get_post_meta( $post->ID, '_pin', true );
+    $value = get_post_meta($post->ID, '_global_notice', true);
+    $fb_value = get_post_meta($post->ID, '_fb', true);
+    $tw_value = get_post_meta($post->ID, '_tw', true);
+    $gp_value = get_post_meta($post->ID, '_gp', true);
+    $in_value = get_post_meta($post->ID, '_in', true);
+    $pin_value = get_post_meta($post->ID, '_pin', true);
 
-    echo '<textarea style="width:100%" id="global_notice" name="global_notice">' . esc_attr( $value ) . '</textarea>';
-    echo '<label for="fb">Facebook</label><input type="text" id="fb "name="fb" value="' . esc_attr( $fb_value ) . '">';
-    echo '<label for="tw">Twitter</label><input type="text" id="tw "name="tw" value="' . esc_attr( $tw_value ) . '">';
-    echo '<label for="gp">Google+</label><input type="text" id="gp "name="gp" value="' . esc_attr( $gp_value ) . '">';
-    echo '<label for="in">LinkedIn</label><input type="text" id="in "name="in" value="' . esc_attr( $in_value ) . '">';
-    echo '<label for="pin">LinkedIn</label><input type="text" id="pin "name="pin" value="' . esc_attr( $pin_value ) . '">';
+    echo '<textarea style="width:100%" id="global_notice" name="global_notice">' . esc_attr($value) . '</textarea>';
+    echo '<label for="fb">Facebook</label><input type="text" id="fb "name="fb" value="' . esc_attr($fb_value) . '">';
+    echo '<label for="tw">Twitter</label><input type="text" id="tw "name="tw" value="' . esc_attr($tw_value) . '">';
+    echo '<label for="gp">Google+</label><input type="text" id="gp "name="gp" value="' . esc_attr($gp_value) . '">';
+    echo '<label for="in">LinkedIn</label><input type="text" id="in "name="in" value="' . esc_attr($in_value) . '">';
+    echo '<label for="pin">LinkedIn</label><input type="text" id="pin "name="pin" value="' . esc_attr($pin_value) . '">';
 }
 
-function save_global_notice_meta_box_data( $post_id ) {
+function save_global_notice_meta_box_data($post_id)
+{
 
     // Check if our nonce is set.
-    if ( ! isset( $_POST['global_notice_nonce'] ) ) {
+    if (!isset($_POST['global_notice_nonce'])) {
         return;
     }
 
     // Verify that the nonce is valid.
-    if ( ! wp_verify_nonce( $_POST['global_notice_nonce'], 'global_notice_nonce' ) ) {
+    if (!wp_verify_nonce($_POST['global_notice_nonce'], 'global_notice_nonce')) {
         return;
     }
 
     // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
         return;
     }
 
     // Check the user's permissions.
-    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+    if (isset($_POST['post_type']) && 'page' == $_POST['post_type']) {
 
-        if ( ! current_user_can( 'edit_page', $post_id ) ) {
+        if (!current_user_can('edit_page', $post_id)) {
             return;
         }
 
-    }
-    else {
+    } else {
 
-        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        if (!current_user_can('edit_post', $post_id)) {
             return;
         }
     }
@@ -420,28 +422,28 @@ function save_global_notice_meta_box_data( $post_id ) {
     /* OK, it's safe for us to save the data now. */
 
     // Make sure that it is set.
-    if ( ! isset( $_POST['global_notice'] ) ) {
+    if (!isset($_POST['global_notice'])) {
         return;
     }
 
     // Sanitize user input.
-    $my_data = sanitize_text_field( $_POST['global_notice'] );
-    $fb_data = sanitize_text_field( $_POST['fb'] );
-    $tw_data = sanitize_text_field( $_POST['tw'] );
-    $gp_data = sanitize_text_field( $_POST['gp'] );
-    $in_data = sanitize_text_field( $_POST['in'] );
-    $pin_data = sanitize_text_field( $_POST['pin'] );
+    $my_data = sanitize_text_field($_POST['global_notice']);
+    $fb_data = sanitize_text_field($_POST['fb']);
+    $tw_data = sanitize_text_field($_POST['tw']);
+    $gp_data = sanitize_text_field($_POST['gp']);
+    $in_data = sanitize_text_field($_POST['in']);
+    $pin_data = sanitize_text_field($_POST['pin']);
 
     // Update the meta field in the database.
-    update_post_meta( $post_id, '_global_notice', $my_data );
-    update_post_meta( $post_id, '_fb', $fb_data );
-    update_post_meta( $post_id, '_tw', $tw_data );
-    update_post_meta( $post_id, '_gp', $gp_data );
-    update_post_meta( $post_id, '_in', $in_data );
-    update_post_meta( $post_id, '_pin', $pin_data );
+    update_post_meta($post_id, '_global_notice', $my_data);
+    update_post_meta($post_id, '_fb', $fb_data);
+    update_post_meta($post_id, '_tw', $tw_data);
+    update_post_meta($post_id, '_gp', $gp_data);
+    update_post_meta($post_id, '_in', $in_data);
+    update_post_meta($post_id, '_pin', $pin_data);
 }
 
-add_action( 'save_post', 'save_global_notice_meta_box_data' );
+add_action('save_post', 'save_global_notice_meta_box_data');
 
 //function global_notice_before_post( $content ) {
 //
@@ -465,6 +467,41 @@ add_action( 'save_post', 'save_global_notice_meta_box_data' );
 */
 
 
+/*
+	==========================================
+	 Services
+	==========================================
+*/
+
+
+function services_func($atts)
+{
+    $atts = shortcode_atts(array(
+        'name' => '',
+        'text' => '',
+        'imghref' => '',
+    ), $atts);
+    return '
+
+    <div class="services-wrap">
+        <div class="pricing_table_btn">
+            <img src="' . $atts['imghref'] . '" alt="service-img" height="42" width="42">
+        </div>
+        <div class="service-name">
+            ' . $atts['name'] . '
+        </div>
+        <div class="services-text">
+        ' . $atts['text'] . '
+        </div>
+
+
+    </div>
+
+';
+}
+
+add_shortcode('services', 'services_func');
+
 
 /*
 	==========================================
@@ -472,94 +509,97 @@ add_action( 'save_post', 'save_global_notice_meta_box_data' );
 	==========================================
 */
 
-function prices_basic_func($atts) {
-    $atts = shortcode_atts( array(
+function prices_basic_func($atts)
+{
+    $atts = shortcode_atts(array(
         'name' => '',
         'price' => '',
         'term' => '',
-        'advantage1'   => '',
+        'advantage1' => '',
         'advantage2' => '',
-        'advantage3'   => '',
+        'advantage3' => '',
         'advantage4' => '',
-        'advantage5'   => '',
+        'advantage5' => '',
         'linkname' => '',
         'href' => '',
-    ), $atts );
+    ), $atts);
     return '
 
     <div class="pricing_table">
         <div class="pricing_table_name">
-            '. $atts['name'] .'
+            ' . $atts['name'] . '
         </div>
         <div class="pricing_table_price">
-        '. $atts['price'] .'
+        ' . $atts['price'] . '
         </div>
         <div class="pricing_table_term">
-        '. $atts['term'] .'
+        ' . $atts['term'] . '
         </div>
         
         <div class="pricing_table_advantages">
-            <p>'. $atts['advantage1'] .'</p>
-            <p>'. $atts['advantage2'] .'</p>
-            <p>'. $atts['advantage3'] .'</p>
-            <p>'. $atts['advantage4'] .'</p>
-            <p>'. $atts['advantage5'] .'</p>
+            <p>' . $atts['advantage1'] . '</p>
+            <p>' . $atts['advantage2'] . '</p>
+            <p>' . $atts['advantage3'] . '</p>
+            <p>' . $atts['advantage4'] . '</p>
+            <p>' . $atts['advantage5'] . '</p>
         </div>
         <div class="pricing_table_btn">
-            <a href="' . $atts['href'] . '">'. $atts['linkname'] .'</a>
+            <a href="' . $atts['href'] . '">' . $atts['linkname'] . '</a>
         </div>
     </div>
 
 ';
 }
 
-add_shortcode('price_basic','prices_basic_func' );
+add_shortcode('price_basic', 'prices_basic_func');
 
-function prices_best_func($atts) {
-    $atts = shortcode_atts( array(
+function prices_best_func($atts)
+{
+    $atts = shortcode_atts(array(
         'name' => '',
         'price' => '',
         'term' => '',
-        'advantage1'   => '',
+        'advantage1' => '',
         'advantage2' => '',
-        'advantage3'   => '',
+        'advantage3' => '',
         'advantage4' => '',
-        'advantage5'   => '',
+        'advantage5' => '',
         'linkname' => '',
         'href' => '',
-    ), $atts );
+    ), $atts);
     return '
 
     <div class="pricing_table_best">
         <div class="pricing_table_name">
-            '. $atts['name'] .'
+            ' . $atts['name'] . '
         </div>
         <div class="pricing_table_price">
-        '. $atts['price'] .'
+        ' . $atts['price'] . '
         </div>
         <div class="pricing_table_term">
-        '. $atts['term'] .'
+        ' . $atts['term'] . '
         </div>
         
         <div class="pricing_table_advantages">
-            <p>'. $atts['advantage1'] .'</p>
-            <p>'. $atts['advantage2'] .'</p>
-            <p>'. $atts['advantage3'] .'</p>
-            <p>'. $atts['advantage4'] .'</p>
-            <p>'. $atts['advantage5'] .'</p>
+            <p>' . $atts['advantage1'] . '</p>
+            <p>' . $atts['advantage2'] . '</p>
+            <p>' . $atts['advantage3'] . '</p>
+            <p>' . $atts['advantage4'] . '</p>
+            <p>' . $atts['advantage5'] . '</p>
         </div>
         <div class="pricing_table_btn">
-            <a href="' . $atts['href'] . '">'. $atts['linkname'] .'</a>
+            <a href="' . $atts['href'] . '">' . $atts['linkname'] . '</a>
         </div>
     </div>
 
 ';
 }
 
-add_shortcode('price_best','prices_best_func' );
+add_shortcode('price_best', 'prices_best_func');
 
 
-function more_post_ajax(){
+function more_post_ajax()
+{
 
     $ppp = (isset($_POST["ppp"])) ? $_POST["ppp"] : 3;
     $page = (isset($_POST['pageNumber'])) ? $_POST['pageNumber'] : 0;
@@ -571,17 +611,17 @@ function more_post_ajax(){
         'post_type' => 'post',
         'posts_per_page' => $ppp,
         'cat' => 18,
-        'paged'    => $page,
+        'paged' => $page,
     );
 
     $loop = new WP_Query($args);
 
     $out = '';
 
-    if ($loop -> have_posts()) :  while ($loop -> have_posts()) : $loop -> the_post();
+    if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post();
         $out .= '<div class="small-12 large-4 columns">
-                <h1>'.get_the_title().'</h1>
-                <p>'.get_the_content().'</p>
+                <h1>' . get_the_title() . '</h1>
+                <p>' . get_the_content() . '</p>
          </div>';
 
     endwhile;
