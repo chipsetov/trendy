@@ -648,10 +648,10 @@ function more_post_ajax()
     header("Content-Type: text/html");
 
     $args = array(
-        'suppress_filters' => true,
-        'post_type' => 'post',
+        /*'suppress_filters' => true,*/
+        'post_type' => 'history',
         'posts_per_page' => $ppp,
-        'cat' => 18,
+       /* 'cat' => 18,*/
         'paged' => $page,
     );
 

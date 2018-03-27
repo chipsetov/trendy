@@ -1,11 +1,11 @@
 jQuery( document ).ready(function() {
     var ppp = 3; // Post per page
-    var cat = 18;
+    /*var cat = 18;*/
     var pageNumber = 1;
 
     function load_posts() {
         pageNumber++;
-        var str = '&cat=' + cat + '&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
+        var str = /*'&cat=' + cat + */'&pageNumber=' + pageNumber + '&ppp=' + ppp + '&action=more_post_ajax';
         jQuery.ajax({
             type: "POST",
             dataType: "html",
