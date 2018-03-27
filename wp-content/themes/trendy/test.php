@@ -11,9 +11,9 @@ Template Name: test
     <?php
     $postsPerPage = 3;
     $args = array(
-        'post_type' => 'post',
+        'post_type' => 'history',
         'posts_per_page' => $postsPerPage,
-        'cat' => 18
+//        'cat' => 18
     );
 
     $loop = new WP_Query($args);
