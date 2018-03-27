@@ -50,6 +50,9 @@ class Test
 
     public function createPostShortcode($atts)
     {
+        $atts = shortcode_atts(array(
+            'desc' => '',
+        ), $atts);
         ob_start();
         ?>
         <div class="subscription-wdg">
