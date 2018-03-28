@@ -116,5 +116,5 @@ function load_testimonials($a){
 }
 add_shortcode("testimonials","load_testimonials");
 
-add_filter('widget_text', 'do_shortcode');
+/*add_filter('widget_text', 'do_shortcode');*/
 ?>
