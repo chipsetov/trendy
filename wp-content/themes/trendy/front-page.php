@@ -40,11 +40,11 @@
                 </div> <!-- cd-timeline-img -->
 
                 <div class="cd-timeline-content">
-                    <h2>Title of section 3</h2>
+                    <h2><?php the_title();?></h2>
                     <p><?php the_content(); ?></p>
                     <span class="cd-date">Jan 24</span>
                 </div> <!-- cd-timeline-content -->
-            </div> <
+            </div>
 
 
 
