@@ -671,7 +671,7 @@ function more_post_ajax()
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 3</h2>
+				<h2>' . get_the_title() . '</h2>
 				<p>'. get_the_content() .'</p>
 				<span class="cd-date">Jan 24</span>
 			</div> <!-- cd-timeline-content -->
