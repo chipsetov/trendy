@@ -40,17 +40,18 @@
                 </div> <!-- cd-timeline-img -->
 
                 <div class="cd-timeline-content">
-                    <h2><?php the_title();?></h2>
+                    <h2><?php the_title(); ?></h2>
                     <p><?php the_content(); ?></p>
                     <span class="cd-date">Jan 24</span>
                 </div> <!-- cd-timeline-content -->
             </div>
 
 
-
             <!--        <div class="small-12 large-4 columns">-->
-            <!--            <h1>--><?php //the_title(); ?><!--</h1>-->
-            <!--            <p>--><?php //the_content(); ?><!--</p>-->
+            <!--            <h1>--><?php //the_title();
+            ?><!--</h1>-->
+            <!--            <p>--><?php //the_content();
+            ?><!--</p>-->
             <!--        </div>-->
 
             <?php
@@ -60,9 +61,9 @@
     </section>
     <!--</div>-->
     <div class="container loadmore-btn-on-main">
-    <div id="more_posts">Load More</div>
+        <div id="more_posts">Load More</div>
     </div>
-
+</section>
 
 <section id="ourteam">
     <div class="container">
@@ -123,6 +124,19 @@
 
     </div>
 </section>
+<section id="our-services">
+    <div class="container">
+        <div class="col-md-4">
+            <?php echo do_shortcode('[services name="DESIGN & ART DIRECTING" text="Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue " imghref="' . get_template_directory_uri() . '/images/client-logo-03.jpg"]'); ?>
+        </div>
+        <div class="col-md-4">
+            <?php echo do_shortcode('[services name="DESIGN & ART DIRECTING" text="Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue " imghref="' . get_template_directory_uri() . '/images/client-logo-03.jpg"]'); ?>
+        </div>
+        <div class="col-md-4">
+            <?php echo do_shortcode('[services name="DESIGN & ART DIRECTING" text="Nulla sit amet mi sed metus venenatis commodo vitae vel magna. Aenean auctor, dolor dignissim congue " imghref="' . get_template_directory_uri() . '/images/client-logo-03.jpg"]'); ?>
+        </div>
+    </div>
+</section>
 <section class="pricing-table">
     <div class="container">
         <div class="col-md-3">
@@ -136,8 +150,12 @@
         </div>
         <div class="col-md-3">
             <?php echo do_shortcode('[price_basic name="starter" price="15" term="mounth" advantage1="Premium Quality" advantage2="24/7 Support" advantage3="Great Results" advantage4="Happy Clients" advantage5="High Performance" linkname="grab now" href="#"]'); ?>
-            <?php echo do_shortcode('[testimonials]'); ?>
         </div>
+    </div>
+</section>
+<section id="testimonials-section">
+    <div class="container">
+        <?php echo do_shortcode('[testimonials]'); ?>
     </div>
 </section>
 

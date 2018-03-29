@@ -525,8 +525,8 @@ function services_func($atts)
     return '
 
     <div class="services-wrap">
-        <div class="pricing_table_btn">
-            <img src="' . $atts['imghref'] . '" alt="service-img" height="42" width="42">
+        <div class="services_table_img">
+            <img src="' . $atts['imghref'] . '" alt="service-img" height="130" width="130">
         </div>
         <div class="service-name">
             ' . $atts['name'] . '

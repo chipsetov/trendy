@@ -1270,3 +1270,33 @@ video::-webkit-media-controls {
     text-transform: uppercase;
 }
 
+.contactus-wdg #contactus-plg-name, .contactus-wdg #contactus-plg-email, .contactus-wdg #contactus-plg-phone{
+    border: 1px solid #cccccc;
+    background-color: #f6f6f6;
+    width: 33%;
+    padding: 18px 90px 18px 18px;
+}
+
+
+.contactus-wdg #contactus-plg-name-submit{
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    background-color: #c59a6d;
+    padding: 18px 43px;
+    border: none;
+}
+
+.contactus-wdg #contactus-plg-message {
+    border: 1px solid #cccccc;
+    background-color: #f6f6f6;
+    width: 100%;
+    padding: 18px 90px 18px 18px;
+}
+
+.submit-btn-class {
+    text-align: center;
+}
