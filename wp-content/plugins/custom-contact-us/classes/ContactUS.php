@@ -36,12 +36,23 @@ class ContactUS
         ?>
         <div class="contactus-wdg">
 
-            <div class="first-row"><input type="text" id="contactus-plg-name" name="contactus-plg-name" placeholder="YOUR NAME"></input>
-                <input type="text" id="contactus-plg-email" name="contactus-plg-email" placeholder="YOUR EMAIL"></input>
-                <input type="text" id="contactus-plg-phone" name="contactus-plg-phone" placeholder="YOUR PHONE"></input>
+            <div class="first-row">
+                <div class="col-md-4">
+                    <input type="text" id="contactus-plg-name" name="contactus-plg-name"
+                           placeholder="YOUR NAME"></input>
+                </div>
+                <div class="col-md-4">
+                    <input type="email" id="contactus-plg-email" name="contactus-plg-email"
+                           placeholder="YOUR EMAIL"></input>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="contactus-plg-phone" name="contactus-plg-phone"
+                           placeholder="YOUR PHONE"></input>
+                </div>
             </div>
-<!--            <div><input type="text" id="contactus-plg-message" name="contactus-plg-message" placeholder="THE MESSAGE"></input></div>-->
-            <div class="second-row"><textarea id="contactus-plg-message" name="contactus-plg-message" cols="40" rows="5" placeholder="THE MESSAGE"></textarea></div>
+            <!--            <div><input type="text" id="contactus-plg-message" name="contactus-plg-message" placeholder="THE MESSAGE"></input></div>-->
+            <div class="second-row"><textarea id="contactus-plg-message" name="contactus-plg-message" cols="40" rows="5"
+                                              placeholder="THE MESSAGE"></textarea></div>
             <div class="submit-btn-class">
                 <button type="button" id="contactus-plg-name-submit">Send the message</button>
             </div>
@@ -79,13 +90,15 @@ class ContactUS
 
     }
 
-    function test_plugin_setup_menu(){
-        add_menu_page( 'Contact us list', 'Contact us list', 'manage_options', 'contact-us-list', array( $this, 'test_init' ) );
+    function test_plugin_setup_menu()
+    {
+        add_menu_page('Contact us list', 'Contact us list', 'manage_options', 'contact-us-list', array($this, 'test_init'));
     }
 
 
-    function test_init(){
-        echo "<h1>Contact us list</h1>";?>
+    function test_init()
+    {
+        echo "<h1>Contact us list</h1>"; ?>
         <table border="1">
         <tr>
             <th>id</th>
@@ -96,15 +109,15 @@ class ContactUS
         </tr>
         <?php
         global $wpdb;
-        $result = $wpdb->get_results ( "SELECT * FROM wp_contact_us_own_plugin" );
-        foreach ( $result as $print )   {
+        $result = $wpdb->get_results("SELECT * FROM wp_contact_us_own_plugin");
+        foreach ($result as $print) {
             ?>
             <tr>
-                <td><?php echo $print->id;?></td>
-                <td><?php echo $print->email;?></td>
-                <td><?php echo $print->name;?></td>
-                <td><?php echo $print->phone;?></td>
-                <td><?php echo $print->message;?></td>
+                <td><?php echo $print->id; ?></td>
+                <td><?php echo $print->email; ?></td>
+                <td><?php echo $print->name; ?></td>
+                <td><?php echo $print->phone; ?></td>
+                <td><?php echo $print->message; ?></td>
             </tr>
         <?php }
         ?>

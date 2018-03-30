@@ -42,7 +42,7 @@
                 <div class="cd-timeline-content">
                     <h2><?php the_title(); ?></h2>
                     <p><?php the_content(); ?></p>
-                    <span class="cd-date">Jan 24</span>
+                    <span class="cd-date"><?php the_time('Y');?></span>
                 </div> <!-- cd-timeline-content -->
             </div>
 
@@ -175,16 +175,16 @@
     <div class="container">
         <div class="rowr">
             <div class="your-class">
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
+                <div><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/client-logo-03.jpg"></div>
 
             </div>
         </div>

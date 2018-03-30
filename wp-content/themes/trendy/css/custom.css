@@ -1273,7 +1273,7 @@ video::-webkit-media-controls {
 .contactus-wdg #contactus-plg-name, .contactus-wdg #contactus-plg-email, .contactus-wdg #contactus-plg-phone{
     border: 1px solid #cccccc;
     background-color: #f6f6f6;
-    width: 33%;
+    width: 100%;
     padding: 18px 90px 18px 18px;
 }
 
